@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+	/* denifition du theme color */
+	/* found color --------------------- */
+	--color-clr-bg: #F8FAFC; /*okay*/
+	--color-clr-bg-dark: #111827;  /*okay*/
+    --color-clr-bg-section: #FFFFFF; /*okay*/
+
+	/* text color ----------------- */
+	--color-clr-title: #111827; /*okay*/
+	--color-clr-title-dark: #E2E8F0; /*okay*/
+
+    --color-clr-text: #6B7280; /*okay*/
+    --color-clr-text-dark: #9CA3AF; /*okay*/
+
+	--color-clr-text-error: #FF4500;
+
+    
+	/* accent color ------------------------------ */
+    --color-clr-accent: #000000;
+
+    --color-clr-btn: #0080FF; /*okay*/
+    --color-clr-btn-hover: #ae8625;
+    
+    --color-clr-dark-card: #1F2937; /*okay*/
+    --color-clr-dark-card-hover: #1F1F1F; /*okay*/
+
+	--color-clr-border: #F3F3F3;
+    --color-clr-border-dark: #444746; /*okay*/
+
+    /* autres */
+    --color-clr-accent-text: #67E8F9; /*okay*/
+
+    --color-clr-accent-violet: #7C3AED; /*okay*/
+    --color-clr-accent-violet-opacity: #8B5CF6; /*okay*/
+    
+    --color-clr-accent-status-green: #22C55E; /*okay*/
+    --color-clr-accent-green: #10A37F; /*okay*/
+    --color-clr-accent-green-hover: #10B981; /*okay*/
+    --color-clr-accent-green-opacity: #6EE7B7; /*okay*/
+    --color-clr-accent-cyan: #ADD8E6; /*okay*/
+    --color-clr-accent-yellow: #EAB308; /*okay*/
+    --color-clr-accent-yellow-star: #FDE047;
+    --color-clr-accent-pink: #F472B6; /*okay*/
+    --color-clr-accent-purple: #7C3AED; /*okay*/
+    --color-clr-accent-orange: #F97316; /*okay*/
+    --color-clr-accent-rose: #FDBCB4; /*okay*/
+    --color-clr-accent-chocolateOrange: #FF9F43; /*okay*/
+    --color-clr-accent-linear-blue: #2563EB; /*okay*/
+}
+
+main {
+    color: #FFFFFF; /*color bg*/
+    color: #F8FAFC; /*color bg*/
+    color: #111827; /*color bg dark*/
+
+    color: #111827; /*color title*/
+    color: #E2E8F0; /*color title dark*/
+
+    color: #6B7280; /*color text*/
+    color: #9CA3AF; /*color text dark*/
+    color: #67E8F9; /*color accent text*/
+
+    color: #444746; /*color btn*/
+}
