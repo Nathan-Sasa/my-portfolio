@@ -1,1 +1,62 @@
-<p>header.component works!</p>
+<header
+    class="flex w-13/14 h-16 px-4 items-center justify-between gap-4 fixed z-10 max-sm:top-2 top-4 left-1/2 -translate-x-1/2 rounded-xl border border-clr-border-dark/30 dark:border-clr-border-dark my-shadow || bg-clr-bg/80 dark:bg-clr-bg-dark/50 backdrop-blur-sm">
+    <ul
+        class="flex items-center gap-4">
+        <li>
+            <a
+                href="/">
+                <img 
+                    [src]="app.logo" 
+                    alt="Logo de l'application"
+                    class="h-8 md:h-10 dark:invert"
+                >
+            </a>
+        </li>
+        <li>
+            <a 
+                [routerLink]="['']">
+                <h2 class="font-text-accent text-lg md:text-xl font-bold text-clr-title dark:text-clr-title-dark">{{ app.name }}</h2>
+            </a>
+        </li>
+    </ul>
+
+    <ul
+        class="hidden md:flex items-center gap-8 *:cursor-pointer">
+        <li>
+            <button
+                [routerLink]="['/landing']"
+                [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                class="dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                Accueil
+            </button>
+        </li>
+        <li>
+            <button
+                [routerLink]="['/portfolio']"
+                class="dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                Portfolio
+            </button>
+        </li>
+        <li>
+            <button
+                [routerLink]="['/about']"
+                class="dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                À propos
+            </button>
+        </li>
+    </ul>
+    
+    <ul
+        class="flex items-center md:gap-4">
+        <li>
+            <app-theme></app-theme>
+        </li>
+        <li>
+            <button
+                [routerLink]="['/contact']"
+                class="hidden md:flex px-4 py-1.5 bg-clr-btn rounded-lg text-clr-title-dark cursor-pointer hover:bg-clr-btn-hover transition-all duration-200 || active:scale-95">
+                Contact
+            </button>
+        </li>
+    </ul>
+</header>

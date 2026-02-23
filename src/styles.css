@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import "tailwindcss";
 
 @font-face {
@@ -44,12 +45,12 @@
     --color-clr-accent: #000000;
 
     --color-clr-btn: #0080FF; /*okay*/
-    --color-clr-btn-hover: #ae8625;
+    --color-clr-btn-hover: #0064E0; /*okay*/
     
     --color-clr-dark-card: #1F2937; /*okay*/
     --color-clr-dark-card-hover: #1F1F1F; /*okay*/
 
-	--color-clr-border: #F3F3F3;
+	--color-clr-border: #2626260a;
     --color-clr-border-dark: #444746; /*okay*/
 
     /* autres */
@@ -74,7 +75,7 @@
 }
 
 main {
-    color: #0b1015; /*color bg*/
+    color: #2626260a;/*color bg*/
     color: #F8FAFC; /*color bg*/
     color: #111827; /*color bg dark*/
 
@@ -99,17 +100,40 @@ main {
 }
 
 .font-linear-color{
-    background: linear-gradient(100deg, var(--color-clr-accent-linear-blue), var(--color-clr-accent-orange) 30%, var(--color-clr-accent-chocolateOrange) 25%);
+    background: linear-gradient(170deg, var(--color-clr-accent-linear-blue) 55%, var(--color-clr-accent-violet-opacity) 70%) 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .lucide {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     stroke-width: 1.1;
 }
 
 .lucide * {
     vector-effect: non-scaling-stroke;
+}
+
+.my-shadow{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+.my-box-shadow{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.06);
+    &:where(.dark, .dark *) {
+        box-shadow: 0 0px 1px var(--color-clr-text-dark);
+    }
+}
+.my-text-shadow {
+    text-shadow: 0 0px 8px var(--color-clr-text-dark);
+    &:where(.dark, .dark *) {
+        text-shadow: 0 2px 5px var(--color-clr-text-dark);
+    }
+}
+.circle {
+    border-radius: 50%;
+    background-color: color-mix(in oklab, var(--color-clr-btn) 50%, transparent);
+    &:where(.dark, .dark *){
+        color: var(--color-clr-title-dark);
+    }
 }
