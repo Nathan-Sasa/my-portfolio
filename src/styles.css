@@ -1,10 +1,33 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'best-choice';
+    src: url('../public/assets/font/BestChoiceDemo-Regular.otf');
+}
+@font-face {
+    font-family: 'natural-mono';
+    src: url('../public/assets/font/NaturalMono-Regular.ttf');
+}
+@font-face {
+    font-family: 'calling-code';
+    src: url('../public/assets/font/CallingCode-Regular.ttf');
+}
+@font-face {
+    font-family: 'code-saver';
+    src: url('../public/assets/font/CodeSaver-Regular.otf');
+}
+@font-face {
+    font-family: 'md-grotesque';
+    src: url('../public/assets/font/MDGROTESQUE-Regular.ttf');
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
 	/* denifition du theme color */
 	/* found color --------------------- */
 	--color-clr-bg: #F8FAFC; /*okay*/
-	--color-clr-bg-dark: #000000;  /*okay*/
+	--color-clr-bg-dark: #0b1015;  /*okay*/
+	/* --color-clr-bg-dark: #000000;  okay */
     --color-clr-bg-section: #FFFFFF; /*okay*/
 
 	/* text color ----------------- */
@@ -51,7 +74,7 @@
 }
 
 main {
-    color: #FFFFFF; /*color bg*/
+    color: #0b1015; /*color bg*/
     color: #F8FAFC; /*color bg*/
     color: #111827; /*color bg dark*/
 
@@ -63,4 +86,20 @@ main {
     color: #67E8F9; /*color accent text*/
 
     color: #444746; /*color btn*/
+}
+
+.font-text-accent {
+    font-family: 'best-choice', sans-serif;
+}
+.font-title{
+    font-family: 'natural-mono', monospace;
+}
+.font-text{
+    font-family: 'md-grotesque', monospace;
+}
+
+.font-linear-color{
+    background: linear-gradient(100deg, var(--color-clr-accent-linear-blue), var(--color-clr-accent-orange) 30%, var(--color-clr-accent-chocolateOrange) 25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
