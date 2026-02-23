@@ -1,0 +1,29 @@
+<button
+    (click)="themeAppService.setLightTheme(); choiceTheme = false"
+    [class.bg-[#0082FB]]="themeAppService.themeDisplay() === appTheme.Light"
+    [class.text-background]="themeAppService.themeDisplay() === appTheme.Light"
+    class="flex pl-5 gap-x-2 items-center w-full hover:bg-[#0064E0] h-8"
+    >
+    <i class="bi bi-sun text-xl"></i>
+    Claire
+</button>
+
+<button
+    (click)="themeAppService.setDarkTheme(); choiceTheme = false"
+    [class.bg-[#0082FB]]="themeAppService.themeDisplay() === appTheme.Dark"
+    [class.text-background]="themeAppService.themeDisplay() === appTheme.Dark"
+    class="flex pl-5 gap-x-2 items-center w-full hover:bg-[#0064E0]"
+    >
+    <i class="bi bi-moon"></i>
+    Sombre
+</button>
+
+<button
+    (click)="themeAppService.setSystemTheme(); choiceTheme = false"
+    [class.bg-[#0082FB]]="themeAppService.themeDisplay() === appTheme.System"
+    [class.text-background]="themeAppService.themeDisplay() === appTheme.System"
+    class="pl-5 gap-x-2 items-center w-full hover:bg-[#0064E0] rounded-b-[10px] hidden lg:flex"
+>
+    <i class="bi bi-pc-display"></i>
+    System
+</button>

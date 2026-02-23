@@ -1,10 +1,10 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
 	/* denifition du theme color */
 	/* found color --------------------- */
 	--color-clr-bg: #F8FAFC; /*okay*/
-	--color-clr-bg-dark: #111827;  /*okay*/
+	--color-clr-bg-dark: #000000;  /*okay*/
     --color-clr-bg-section: #FFFFFF; /*okay*/
 
 	/* text color ----------------- */
