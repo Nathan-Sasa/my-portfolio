@@ -103,3 +103,13 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.lucide {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.1;
+}
+
+.lucide * {
+    vector-effect: non-scaling-stroke;
+}
