@@ -1,12 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LucideAngularModule, BrushIcon, Grid2x2CheckIcon, UnplugIcon, RulerDimensionLineIcon, ChartColumnIcon, SearchCodeIcon, LoaderIcon, DatabaseZapIcon } from 'lucide-angular';
+import { ScrollAnimDirective } from '../../directive/scroll-anim.directive';
+import { ParallaxDirective } from '../../directive/parallax.directive';
 
 @Component({
     selector: 'app-work',
     imports: [
-      CommonModule,
-	  LucideAngularModule
+		CommonModule,
+		LucideAngularModule,
+		ScrollAnimDirective,
+		ParallaxDirective
     ],
     templateUrl: './work.component.html',
     styleUrl: './work.component.css',
