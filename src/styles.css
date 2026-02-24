@@ -137,3 +137,57 @@ main {
         color: var(--color-clr-title-dark);
     }
 }
+
+
+/* animations ==================*/
+.text-focus-in {
+	-webkit-animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in .7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.rebond{
+    animation: rebond 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes rebond {
+    from{
+        transform: translateY(-100%);
+    }to {
+        transform: translateY(0);
+    }
+}
+
+/* .rebond-up{
+    animation: rebond-up .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes rebond-up {
+    from{
+        transform: translateY(100%);
+    }to {
+        transform: translateY(0);
+    }
+} */

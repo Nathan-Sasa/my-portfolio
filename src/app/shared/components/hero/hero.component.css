@@ -1,0 +1,52 @@
+.trans{
+    transform: skew(5deg, -5deg, 20deg, 10deg) scale(0.5);
+}
+.rebond-box-header{
+    animation: rebond 1.2s 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes rebond {
+    from{
+        opacity: 0;
+        transform: translateY(-250%);
+    }to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.op-scale{
+    animation: opScale 500ms 500ms ease-out forwards;
+}
+@keyframes opScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.opacity-anim{
+    animation: op 2s 800ms ease-out forwards;
+}
+@keyframes op {
+    from{
+        opacity: 0;
+    }to {
+       opacity: 1;
+    }
+}
+
+.rebond-up{
+    animation: rebond-up 1s 1100ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes rebond-up {
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
