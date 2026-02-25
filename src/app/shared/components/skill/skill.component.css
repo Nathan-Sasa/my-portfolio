@@ -1,0 +1,26 @@
+.pop{
+    animation: pop .6s 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.closePop{
+    animation: close 500ms linear forwards;
+}
+
+@keyframes close {
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    } to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
