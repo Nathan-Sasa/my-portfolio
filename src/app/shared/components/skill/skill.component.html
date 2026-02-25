@@ -71,4 +71,13 @@
             </button>
         </article>
     </div>
+
+    <!-- tsParticle -->
+     <ngx-particles
+        id="tsparticles"
+        [options]="particlesOptions"
+        (particlesLoaded)="particlesLoaded($event)"
+        [particlesInit]="particlesInit"
+        class="absolute w-full h-full top-0 -z-10"
+    ></ngx-particles>
 </section>
