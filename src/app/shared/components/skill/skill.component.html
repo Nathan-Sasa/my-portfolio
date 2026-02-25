@@ -44,9 +44,9 @@
                 <lucide-icon [img]="icon" class=""></lucide-icon>
             </button>
             <div
-                class="h-2/8 py-4 w-full flex flex-col gap-2 items-center justify-center border-b border-clr-border-dark/40 dark:border-clr-border-dark dark:text-clr-text-dark">
+                class="h-2/8 py-4 w-full flex flex-col gap-2 items-center justify-center border-b border-clr-border-dark/40 dark:border-clr-border-dark text-clr-text dark:text-clr-text-dark">
                 <i class="{{selectedSkill.icon}} {{selectedSkill.class}} text-3xl md:text-5xl xl:text-6xl"></i>
-                <p>Niveau: <span class="font-linear-color font-semibold">{{selectedSkill.level}}</span></p>
+                <p>Niveau: <span class="font-linear-color font-semibold text-clr-text dark:text-clr-text-dark">{{selectedSkill.level}}</span></p>
             </div>
             <div
                 class="h-7/9 w-full flex items-start md:items-center text-justify mt-2 px-4 pb-8 dark:text-clr-text-dark relative"
@@ -55,7 +55,7 @@
                     'overflow-y-hidden': lirePlus === false
                 }">
                 <p
-                    class="font-text tracking-wider"
+                    class="font-text tracking-wider text-clr-text dark:text-clr-text-dark"
                     [ngClass]="{
                         'line-clamp-none': lirePlus === true,
                         'line-clamp-11 min-[321px]:line-clamp-15 ': lirePlus === false
