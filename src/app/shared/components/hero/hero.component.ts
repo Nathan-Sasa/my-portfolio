@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 	imports: [
 		CommonModule,
 		RouterModule,
-		// TextWriterDirective
+		TextWriterDirective
 	],
 	templateUrl: './hero.component.html',
 	styleUrl: './hero.component.css',
