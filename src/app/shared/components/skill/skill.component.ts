@@ -39,6 +39,19 @@ export class SkillComponent implements OnInit {
 
 	// Particles options
 	particlesOptions = {
+		fpsLimit: 120,
+		pauseOnBlur: true,
+		pauseOnOutsideViewport: true,
+		responsive: [
+			{
+				maxWidth: 768, // Sur mobile
+				options: {
+					particles: {
+					number: { value: 60 } // On divise par deux le nombre de particules
+					}
+				}
+			}
+		],
 		fullScreen: {
 			enable: false 
 		},
@@ -47,10 +60,17 @@ export class SkillComponent implements OnInit {
 				value: "transparent" 
 			} 
 		},
-		fpsLimit: 120,
 		particles: {
 			color: { 
 				value: "#ffffff" 
+			},
+			opacity: { 
+				value: 0.5 
+			},
+			number: { 
+				density: { 
+					enable: true, area: 800 
+				}, value: 80 
 			},
 			links: { 
 				color: "#ffffff", 
@@ -60,16 +80,11 @@ export class SkillComponent implements OnInit {
 				width: 1 
 			},
 			move: { 
-				direction: MoveDirection.none, enable: true, outModes: { 
-					default: OutMode.out }, speed: 2 
-				},
-			number: { 
-				density: { 
-					enable: true, area: 800 
-				}, value: 80 
-			},
-			opacity: { 
-				value: 0.5 
+				direction: MoveDirection.none, 
+				enable: true, outModes: { 
+					default: OutMode.out 
+				}, 
+				speed: 2 
 			},
 			shape: { 
 				type: "circle" 
@@ -89,7 +104,22 @@ export class SkillComponent implements OnInit {
 				} 
 			},
 		}
-  };
+  	}
+
+	// detectsOn: "window", 
+	// events: {
+	// 	onHover: {
+	// 	enable: true,
+	// 	mode: "parallax" // ou "bubble", "repulse", etc.
+	// 	}
+	// },
+	// modes: {
+	// 	parallax: {
+	// 		enable: true,
+	// 		force: 60,
+	// 		smooth: 10
+	// 	}
+	// }
 
 	ngOnInit(): void {
 		this.loadSkills();
