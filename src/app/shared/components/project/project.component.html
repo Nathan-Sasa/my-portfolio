@@ -16,10 +16,15 @@
     
     <div
         #projectTop
-        class="w-full flex flex-col gap-12 relative px-8.5 mt-16 pt-24">
+        class="w-full flex flex-col gap-12 relative px-8.5 mt-16 pt-12 md:pt-24">
         <div
             class="w-full flex items-center gap-8 justify-between">
-           <p class="text-sm md:text-lg font-text">Fitre par projets : </p>
+           <button 
+                [routerLink]="['/portfolio']"
+                class="flex py-1.5 px-4 rounded-lg || border border-border-clr-border-dark dark:hover:border-clr-border-dark/50  dark:hover:text-clr-text-dark transition-all duration-300 text-xs md:text-lg cursor-pointer font-text text-clr-text-dark"
+                >
+                Voir plus
+            </button>
            <div
                 class="bloc md:hidden"
                 >
@@ -28,7 +33,7 @@
                     (change)="projectFiltered = getProjectFiltered()"
                     name="" 
                     (click)="scrollTo()"
-                    class="flex md:hidden py-1.5 px-1 rounded-lg || border border-transparent hover:border-clr-border-dark dark:hover:border-clr-border-dark/50  dark:hover:text-clr-text-dark transition-all duration-300 text-sm font-text"
+                    class="flex md:hidden py-2 px-1 rounded-lg || border border-clr-border-dark dark:hover:border-clr-border-dark/50  dark:hover:text-clr-text-dark transition-all duration-300 text-sm font-text || focus:outline-none focus:border-clr-border-dark dark:focus:border-b-clr-border-dark/50 focus:border-2 text-clr-text-dark"
                     >
                     <option value="tout" (click)="scrollTo()">Tout</option>
                     <option value="Collaboration">Collaboration</option>
@@ -106,14 +111,12 @@
            </div>
         </div>
 
-        <!-- popup projects -->
         <div
             #scrollPop
-            class="w-full grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-16">
+            class="w-full grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-16 gap-x-16">
             <article
-                
                 *ngFor="let project of projectFiltered"
-                class="group flex flex-col justify-between relative cursor-pointer rounded-2xl hover:border hover:border-clr-border-dark/30 hover:bg-clr-btn-hover/20 dark:hover:border-clr-border-dark/80 dark:hover:bg-clr-dark-card/50 hover:transition-all hover:duration-300"
+                class="group flex flex-col justify-between relative cursor-pointer rounded-2xl hover:border hover:border-clr-border-dark/30 md:hover:bg-clr-btn-hover/20 dark:hover:border-clr-border-dark/80 md:dark:hover:bg-clr-dark-card/50 hover:transition-all hover:duration-300"
                 [title]="project.name"
                 >
                 <div
@@ -121,11 +124,11 @@
                     <img 
                         [src]="project.image" 
                         alt=""
-                        class="w-7/10 group-hover:scale-110 transition-all duration-300"
+                        class="w-7/10 md:group-hover:scale-110 transition-all duration-300"
                     >
                 </div>
                 <div
-                    class="flex flex-col gap-2 itemse-center justify-center absolute top-2 right-2 xl:hidden xl:group-hover:flex">
+                    class="flex flex-col gap-2 itemse-center justify-center absolute top-2 -right-2 md:right-2 xl:hidden xl:group-hover:flex">
                     <a 
                         [href]="project.link" 
                         target="_blank"
@@ -148,6 +151,7 @@
                 </div>
             </article>
 
+            <!-- popup projects -->
             <div
                 *ngIf="projectBackPop"
                 class="w-full h-screen flex justify-center items-center inset-0 fixed top-0 bg-clr-bg-dark/20 backdrop-blur-sm z-11 overflow-hidden">
@@ -165,17 +169,17 @@
                     </button>
                     <div
                         class="w-full flex flex-col justify-center items-center py-4 h-2/10 border-b">
-                        <h2 class="text-clr-title dark:text-clr-title-dark text-2xl font-semibold font-text-accent"> {{selectedProject.name}}</h2>
+                        <h2 class="text-clr-title dark:text-clr-title-dark text-sm md:text-lg lg:text-2xl font-semibold font-text-accent"> {{selectedProject.name}}</h2>
                         <a 
                             [href]="selectedProject.link"
                             target="_blank"
-                            class="text-clr-text flex items-center gap-2 relative group hover:text-clr-text-dark transition-all duration-200 font-text">
+                            class="text-clr-text text-xs md:text-sm lg:text-lg flex items-center gap-2 relative group hover:text-clr-text-dark transition-all duration-200 font-text">
                             <span>
                                 {{selectedProject.link}}
                             </span>
                             <lucide-icon 
                                 [img]="icons.linkIcon"
-                                class="absolute -right-3 -translate-y-1/2 lg:opacity-0 group-hover:opacity-100 transition-all duration-200">
+                                class="absolute text-xs md:text-sm lg:text-lg -right-3 -translate-y-1/2 lg:opacity-0 group-hover:opacity-100 transition-all duration-200">
                             </lucide-icon>
                         </a>
                     </div>
@@ -199,7 +203,7 @@
                                 <!-- <span class="dark:text-clr-text-dark">Techno : </span> -->
                                 @for(stack of selectedProject.stacks; track $index){
                                     <i
-                                        class="{{stack.stack}} {{stack.class}} mr-1 lg:text-2xl"
+                                        class="{{stack.stack}} {{stack.class}} mr-0.5 md:mr-1 text-lg md:text-lg lg:text-2xl"
                                     ></i>
                                 }
                             </div>
@@ -207,13 +211,13 @@
                                 class="flex items-center gap-2 pt-4"
                                 >
                                 <!-- <span class="dark:text-clr-text-dark">Durée : </span> -->
-                                <p class="text-sm dark:text-clr-text-dark">{{selectedProject.time}}</p>
+                                <p class="text-xs md:text-sm lg:text-lg text-clr-text dark:text-clr-text-dark">{{selectedProject.time}}</p>
                             </div>
                             <div
                                 class="flex items-center gap-2"
                                 >
                                 <!-- <span class="dark:text-clr-text-dark">Date : </span> -->
-                                <p class="text-sm  dark:text-clr-text-dark">{{selectedProject.date | date}}</p>
+                                <p class="text-xs md:text-sm lg:text-lg text-clr-text  dark:text-clr-text-dark">{{selectedProject.date | date}}</p>
                             </div>
                         </div>
                         <div
