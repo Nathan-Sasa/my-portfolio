@@ -161,7 +161,7 @@ export class SkillComponent implements OnInit {
 			this.closedPop = false
 			this.selectedSkill = null
 			this.renderer.removeClass(document.body, 'overflow-y-hidden')
-			console.log('selectedSkill : ', this.selectedSkill)
+			// console.log('selectedSkill : ', this.selectedSkill)
 		}, 300)
 	}
 	handleLirePlus(): void {
@@ -174,7 +174,7 @@ export class SkillComponent implements OnInit {
 		await loadSlim(engine);
   	}
 	public particlesLoaded(container: Container): void {
-	  	console.log("Particles container loaded", container);
+	  	// console.log("Particles container loaded", container);
 	}
 
 

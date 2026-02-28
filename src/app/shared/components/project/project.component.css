@@ -1,0 +1,22 @@
+/* label{
+    opacity: .5;
+} */
+
+/* label:has(input[type="radio"]:checked){
+    border-color: var(--color-clr-btn-hover);
+    background: var(--color-clr-btn);
+    opacity: .5;
+} */
+label:has(input[type="radio"]:checked){
+    border-color: color-mix(in oklab, var(--color-clr-border-dark) 10%,  transparent);
+    background: color-mix(in oklab, var(--color-clr-btn) 100%,  transparent);
+    color: var(--color-clr-title-dark);
+    
+    &:where(.dark, .dark *){
+        border-color: color-mix(in oklab, var(--color-clr-border-dark) 100%,  transparent);
+        background: color-mix(in oklab, var(--color-clr-dark-card) 50%,  transparent);
+        color: var(--color-clr-text-dark);
+    }
+}
+
+/* color-mix(in oklab, var(--color-clr-btn) 50%, transparent) */

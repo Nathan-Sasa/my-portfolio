@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "CTPro Services",
+        "description": "Un site web pour une entreprise multi-sectorielle qui s'exerce dans la formation, vente de licences et logiciels, ainsi tant d'autres services. Le site a un frontend avec angular et tailwind, un backend java spring boot et une base de donnée supabase.",
+        "image": "assets/img/images/project/ctproservices.webp",
+        "images": {
+            "image1": "assets/img/images/project/ctproservices-laptop.png",
+            "image2": "assets/img/images/project/ctproservices-tablette.png",
+            "image3": "assets/img/images/project/ctproservices-mobile.png",
+            "image4": "assets/img/images/project/ctproservices-min-mobile.png"
+        },
+        "stacks": {
+            "name1": "ri-angularjs-line",
+            "name2": "ri-tailwind-css-fill",
+            "name3": "ri-java-line",
+            "name4": "ri-supabase-fill"
+        },
+        "isTeam": "Solo",
+        "project": "complet",
+        "link": "https://www.ctproservices.org",
+        "time": "1 mois",
+        "date": "2025-09-18",
+        "stackFilter": "angular"
+    },
+    {
+        "id": 2,
+        "name": "Nathandev portfolio",
+        "description": "Mon portfolio web",
+        "image": "assets/img/images/project/nathandev-portfolio.webp",
+        "images": {
+            "image1": "assets/img/images/project/nathandev-portfolio-laptop.png",
+            "image2": "assets/img/images/project/nathandev-portfolio-tablette.png",
+            "image3": "assets/img/images/project/nathandev-portfolio-mobile.png",
+            "image4": "assets/img/images/project/nathandev-portfolio-mini-mobile.png"
+        },
+        "stacks": {
+            "name1": "",
+            "name2": "",
+            "name3": "",
+            "name4": ""
+        },
+        "isTeam": "Collaboration",
+        "project": "",
+        "link": "https://nathandev-portfolio.vercel.app/",
+        "time":"1 mois",
+        "date": "2025-08-18",
+        "stackFilter": "react"
+    },
+    {
+        "id": 3,
+        "name": "",
+        "description": "",
+        "image": "",
+        "images": {
+            "image1": "",
+            "image2": "",
+            "image3": "",
+            "image4": ""
+        },
+        "stacks": {
+            "name1": "",
+            "name2": "",
+            "name3": "",
+            "name4": ""
+        },
+        "isTeam": "Solo",
+        "project": "",
+        "link": "",
+        "time":"1 mois",
+        "date": "2025-08-18",
+        "stackFilter": "next"
+    }
+]
