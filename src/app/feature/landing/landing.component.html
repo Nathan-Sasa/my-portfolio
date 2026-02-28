@@ -1,8 +1,13 @@
 <main
     class="w-full relative">
     <app-header></app-header>
-    <app-hero></app-hero>
+    <app-hero (toProject)="scrollToProject()"></app-hero>
     <app-work></app-work>
     <app-skill></app-skill>
-    <app-project></app-project>
+    <div
+        #project
+        class="w-full relative">
+        <app-project ></app-project>
+    </div>
+    <app-me></app-me>
 </main>

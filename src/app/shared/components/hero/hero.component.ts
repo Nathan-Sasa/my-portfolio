@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 import { TextWriterDirective } from '../../directive/textwriter.directive';
 import { RouterModule } from '@angular/router';
 
@@ -14,6 +14,11 @@ import { RouterModule } from '@angular/router';
 	styleUrl: './hero.component.css',
 })
 export class HeroComponent {
+
+	@Output() toProject = new EventEmitter<void>();
+	scrollToProject(){
+		this.toProject.emit()
+	}
 
 	stacks = [
 		{

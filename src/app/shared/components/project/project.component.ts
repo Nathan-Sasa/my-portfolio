@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ScrollAnimDirective } from '../../directive/scroll-anim.directive';
 import { DataService } from '../../../core/services/data.service';
 import { IProject } from '../../../core/interfaces/interfaces';
 import { RouterModule } from '@angular/router';
 import { FormsModule} from '@angular/forms'
+import { LucideAngularModule, LinkIcon, InfoIcon, XIcon } from 'lucide-angular';
 
 @Component({
 	selector: 'app-project',
@@ -12,7 +13,8 @@ import { FormsModule} from '@angular/forms'
 		CommonModule,
 		FormsModule,
 		RouterModule,
-		ScrollAnimDirective
+		ScrollAnimDirective,
+		LucideAngularModule
 	],
 	templateUrl: './project.component.html',
 	styleUrl: './project.component.css',
@@ -22,12 +24,25 @@ export class ProjectComponent implements OnInit {
 	projects: IProject[] = []
 	projectFiltered: IProject[] = []
 	filterDefault: string = 'tout'
+	selectedProject:any = null
+
+	projectBackPop: boolean = false
+	closedProjectPop = false
+
 
 	@ViewChild('projectTop') projectTop!: ElementRef
+	@ViewChild('scrollPop') scrollPop!: ElementRef
 
 	constructor(
-		private dataService: DataService 
+		private dataService: DataService,
+		private renderer: Renderer2
 	) {} 
+
+	icons = {
+		linkIcon: LinkIcon,
+		info: InfoIcon,
+		xIcon: XIcon
+	}
 
 	ngOnInit(): void {
 		this.loadProject()
@@ -61,6 +76,33 @@ export class ProjectComponent implements OnInit {
 				block: 'start'
 			})
 		}
+	}
+	scrollToPop(): void {
+		if(this.scrollPop){
+			this.scrollPop.nativeElement.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			})
+		}
+	}
+
+	fixeBodyScroll(): void{
+        if(this.selectedProject) {
+            this.renderer.addClass(document.body, 'overflow-y-hidden');
+        }else {
+            this.renderer.removeClass(document.body, 'overflow-y-hidden')
+        }
+    }
+
+	closePop(): void {
+		this.closedProjectPop = true
+		setTimeout(() => {
+			this.projectBackPop = false
+			this.closedProjectPop = false
+			this.selectedProject = null
+			this.renderer.removeClass(document.body, 'overflow-y-hidden')
+			// console.log('selectedSkill : ', this.selectedSkill)
+		}, 300)
 	}
 
 }

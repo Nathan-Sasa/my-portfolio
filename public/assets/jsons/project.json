@@ -4,18 +4,38 @@
         "name": "CTPro Services",
         "description": "Un site web pour une entreprise multi-sectorielle qui s'exerce dans la formation, vente de licences et logiciels, ainsi tant d'autres services. Le site a un frontend avec angular et tailwind, un backend java spring boot et une base de donnée supabase.",
         "image": "assets/img/images/project/ctproservices.webp",
-        "images": {
-            "image1": "assets/img/images/project/ctproservices-laptop.png",
-            "image2": "assets/img/images/project/ctproservices-tablette.png",
-            "image3": "assets/img/images/project/ctproservices-mobile.png",
-            "image4": "assets/img/images/project/ctproservices-min-mobile.png"
-        },
-        "stacks": {
-            "name1": "ri-angularjs-line",
-            "name2": "ri-tailwind-css-fill",
-            "name3": "ri-java-line",
-            "name4": "ri-supabase-fill"
-        },
+        "images": [
+            {
+                "image": "assets/img/images/project/ctproservices-laptop.webp"
+            },
+            {
+                "image": "assets/img/images/project/ctproservices-tablette.webp"
+            },
+            {
+                "image": "assets/img/images/project/ctproservices-mobile.webp"
+            },
+            {
+                "image": "assets/img/images/project/ctproservices-min-mobile.webp"
+            }
+        ],
+        "stacks": [
+            {
+                "stack": "ri-angularjs-line",
+                "class": "angular-color"
+            },
+            {
+                "stack": "ri-tailwind-css-fill",
+                "class": "text-clr-accent-text"
+            },
+            {
+                "stack": "ri-java-line",
+                "class": "java-color"
+            },
+            {
+                "stack": "ri-supabase-fill",
+                "class": "text-clr-accent-green"
+            }
+        ],
         "isTeam": "Solo",
         "project": "complet",
         "link": "https://www.ctproservices.org",
@@ -28,18 +48,30 @@
         "name": "Nathandev portfolio",
         "description": "Mon portfolio web",
         "image": "assets/img/images/project/nathandev-portfolio.webp",
-        "images": {
-            "image1": "assets/img/images/project/nathandev-portfolio-laptop.png",
-            "image2": "assets/img/images/project/nathandev-portfolio-tablette.png",
-            "image3": "assets/img/images/project/nathandev-portfolio-mobile.png",
-            "image4": "assets/img/images/project/nathandev-portfolio-mini-mobile.png"
-        },
-        "stacks": {
-            "name1": "",
-            "name2": "",
-            "name3": "",
-            "name4": ""
-        },
+        "images": [
+            {
+                "image": "assets/img/images/project/nathandev-portfolio-laptop.webp"
+            },
+            {
+                "image": "assets/img/images/project/nathandev-portfolio-tablette.webp"
+            },
+            {
+                "image": "assets/img/images/project/nathandev-portfolio-mobile.webp"
+            },
+            {
+                "image": "assets/img/images/project/nathandev-portfolio-mini-mobile.webp"
+            }
+        ],
+        "stacks": [
+            {
+                "stack": "ri-angularjs-line",
+                "class": "angular-color"
+            },
+            {
+                "stack": "ri-tailwind-css-fill",
+                "class": "text-clr-accent-text"
+            }
+        ],
         "isTeam": "Collaboration",
         "project": "",
         "link": "https://nathandev-portfolio.vercel.app/",
@@ -49,21 +81,85 @@
     },
     {
         "id": 3,
-        "name": "",
+        "name": "Couture Site Web",
         "description": "",
-        "image": "",
-        "images": {
-            "image1": "",
-            "image2": "",
-            "image3": "",
-            "image4": ""
-        },
-        "stacks": {
-            "name1": "",
-            "name2": "",
-            "name3": "",
-            "name4": ""
-        },
+        "image": "assets/img/images/project/couture-site-web.webp",
+        "images": [
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            }
+        ],
+        "stacks": [
+            {
+                "stack": "ri-angularjs-line",
+                "class": ""
+            },
+            {
+                "stack": "ri-tailwind-css-fill",
+                "class": ""
+            },
+            {
+                "stack": "ri-java-line",
+                "class": ""
+            },
+            {
+                "stack": "ri-supabase-fill",
+                "class": ""
+            }
+        ],
+        "isTeam": "Solo",
+        "project": "",
+        "link": "",
+        "time":"1 mois",
+        "date": "2025-08-18",
+        "stackFilter": "next"
+    },
+    {
+        "id": 4,
+        "name": "Nathan B Sasa Portfolio ",
+        "description": "",
+        "image": "assets/img/images/project/nathan-b-sasa-portfolio.webp",
+        "images": [
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            },
+            {
+                "image": ""
+            }
+        ],
+        "stacks": [
+            {
+                "stack": "ri-angularjs-line",
+                "class": ""
+            },
+            {
+                "stack": "ri-tailwind-css-fill",
+                "class": ""
+            },
+            {
+                "stack": "ri-java-line",
+                "class": ""
+            },
+            {
+                "stack": "ri-supabase-fill",
+                "class": ""
+            }
+        ],
         "isTeam": "Solo",
         "project": "",
         "link": "",

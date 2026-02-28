@@ -12,6 +12,11 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/portfolio/portfolio.component').then(m => m.PortfolioComponent)
     },
     {
+        path: 'about',
+        title: 'NathanDev - A propos',
+        loadComponent: () => import('./feature/about-me/about-me.component').then(m => m.AboutMeComponent)
+    },
+    {
         path: 'contact',
         title: 'NathanDev - Contact',
         loadComponent: () => import('./feature/contact/contact.component').then(m => m.ContactComponent)

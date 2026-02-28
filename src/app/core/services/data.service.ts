@@ -22,3 +22,19 @@ export class DataService {
         return this.http.get<IProject[]>(this.projectApi)
     }
 }
+
+// json data
+// ,
+//             {
+//             "image1": "assets/img/images/project/nathandev-portfolio-laptop.png",
+//             "image2": "assets/img/images/project/nathandev-portfolio-tablette.png",
+//             "image3": "assets/img/images/project/nathandev-portfolio-mobile.png",
+//             "image4": "assets/img/images/project/nathandev-portfolio-mini-mobile.png"
+//             }
+
+// {
+//             "image1": "",
+//             "image2": "",
+//             "image3": "",
+//             "image4": ""
+//         },
