@@ -86,16 +86,19 @@
         "image": "assets/img/images/project/couture-site-web.webp",
         "images": [
             {
-                "image": ""
+                "image": "assets/img/images/project/couture-site-web-laptop.webp"
             },
             {
-                "image": ""
+                "image": "assets/img/images/project/couture-site-web-tablette.webp"
             },
             {
-                "image": ""
+                "image": "assets/img/images/project/couture-site-web-mobile.webp"
             },
             {
-                "image": ""
+                "image": "assets/img/images/project/couture-site-web-laptop1.webp"
+            },
+            {
+                "image": "assets/img/images/project/couture-site-web-laptop2.webp"
             }
         ],
         "stacks": [
@@ -130,16 +133,13 @@
         "image": "assets/img/images/project/nathan-b-sasa-portfolio.webp",
         "images": [
             {
-                "image": ""
+                "image": "assets/img/images/project/nathan-b-sasa-protfolio-laptop.webp"
             },
             {
-                "image": ""
+                "image": "assets/img/images/project/nathan-b-sasa-portfolio-laptop1.webp"
             },
             {
-                "image": ""
-            },
-            {
-                "image": ""
+                "image": "assets/img/images/project/nathan-b-sasa-portfolio-laptop2.webp"
             }
         ],
         "stacks": [

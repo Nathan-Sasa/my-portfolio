@@ -22,14 +22,29 @@
     src: url('../public/assets/font/MDGROTESQUE-Regular.ttf');
 }
 
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes eff {
+	from {
+		--rotate: 360deg;
+	}
+	to {
+		--rotate: 0deg;
+	}
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
 	/* denifition du theme color */
 	/* found color --------------------- */
 	--color-clr-bg: #F8FAFC; /*okay*/
 	--color-clr-bg-dark: #0b1015;  /*okay*/
-	/* --color-clr-bg-dark: #000000;  okay */
     --color-clr-bg-section: #FFFFFF; /*okay*/
+	--color-clr-bg-section-dark: #000000;  /*okay*/
 
 	/* text color ----------------- */
 	--color-clr-title: #111827; /*okay*/
