@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { DataService } from '../../../core/services/data.service';
 import { ISkill } from '../../../core/interfaces/interfaces';
 import { CommonModule } from '@angular/common';
@@ -21,6 +21,7 @@ import { ScrollAnimDirective } from '../../directive/scroll-anim.directive';
 	],
 	templateUrl: './skill.component.html',
 	styleUrl: './skill.component.css',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkillComponent implements OnInit {
 
@@ -44,10 +45,10 @@ export class SkillComponent implements OnInit {
 		pauseOnOutsideViewport: true,
 		responsive: [
 			{
-				maxWidth: 768, // Sur mobile
+				maxWidth: 768,
 				options: {
 					particles: {
-					number: { value: 60 } // On divise par deux le nombre de particules
+					number: { value: 30 } 
 					}
 				}
 			}
@@ -70,7 +71,7 @@ export class SkillComponent implements OnInit {
 			number: { 
 				density: { 
 					enable: true, area: 800 
-				}, value: 80 
+				}, value: 50 
 			},
 			links: { 
 				color: "#ffffff", 
@@ -156,8 +157,8 @@ export class SkillComponent implements OnInit {
 
 	closePop(): void {
 		this.closedPop = true
+		this.backPop = false
 		setTimeout(() => {
-			this.backPop = false
 			this.closedPop = false
 			this.selectedSkill = null
 			this.renderer.removeClass(document.body, 'overflow-y-hidden')

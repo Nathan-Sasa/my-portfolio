@@ -1,35 +1,60 @@
 <div
-    class="flex gap-2 items-center">
-    <button
-        (click)="themeAppService.setLightTheme(); choiceTheme = false"
-        [class.circle]="themeAppService.themeDisplay() === appTheme.Light"
-        [class.text-background]="themeAppService.themeDisplay() === appTheme.Light"
-        class="items-center p-1.5 active:scale-90 transition-all duration-200"
-        >
-        <lucide-icon 
-            [img]="icons.sun" 
-            class="my-icon"></lucide-icon>
-    </button>
+    class="flex flex-col items-start lg:flex-row gap-2 lg:items-center">
+    <div
+        class="flex items-center justify-start gap-2">
+        <button
+            (click)="themeAppService.setLightTheme(); choiceTheme = false"
+            [class.circle]="themeAppService.themeDisplay() === appTheme.Light"
+            [class.text-background]="themeAppService.themeDisplay() === appTheme.Light"
+            class="items-center p-1.5 active:scale-90 transition-all duration-200 dark:text-clr-text-dark"
+            >
+            <lucide-icon 
+                [img]="icons.sun" 
+                class="my-icon text-lg max-lg:text-2xl"></lucide-icon>
+        </button>
+        <span 
+            [class.circleNotBg]="themeAppService.themeDisplay() === appTheme.Light"
+            (click)="themeAppService.setLightTheme(); choiceTheme = false"
+            class="flex lg:hidden font-text text-lg md:text-2xl">Light</span>
+    </div>
     
-    <button
-        (click)="themeAppService.setDarkTheme(); choiceTheme = false"
-        [class.circle]="themeAppService.themeDisplay() === appTheme.Dark"
-        [class.text-background]="themeAppService.themeDisplay() === appTheme.Dark"
-        class="items-center p-1.5 active:scale-90 transition-all duration-200"
-        >
-        <lucide-icon 
-            [img]="icons.moon" 
-            class="my-icon"></lucide-icon>
-    </button>
+    <div
+        class="flex items-center justify-start gap-2">
+        <button
+            (click)="themeAppService.setDarkTheme(); choiceTheme = false"
+            [class.circle]="themeAppService.themeDisplay() === appTheme.Dark"
+            [class.text-background]="themeAppService.themeDisplay() === appTheme.Dark"
+            class="items-center p-1.5 active:scale-90 transition-all duration-200 dark:text-clr-text-dark"
+            >
+            <lucide-icon 
+                [img]="icons.moon" 
+                class="my-icon"></lucide-icon>
+        </button>
+        <span
+            [class.circleNotBg]="themeAppService.themeDisplay() === appTheme.Dark"
+            (click)="themeAppService.setDarkTheme(); choiceTheme = false"
+            class="flex lg:hidden font-text text-lg md:text-2xl">
+            Dark
+        </span>
+    </div>
     
-    <button
-        (click)="themeAppService.setSystemTheme(); choiceTheme = false"
-        [class.circle]="themeAppService.themeDisplay() === appTheme.System"
-        [class.text-background]="themeAppService.themeDisplay() === appTheme.System"
-        class="items-center p-1.5 active:scale-90 transition-all duration-200"
-    >
-        <lucide-icon 
-            [img]="icons.system" 
-            class="my-icon"></lucide-icon>
-    </button>
+    <div
+        class="flex items-center justify-start gap-2">
+        <button
+            (click)="themeAppService.setSystemTheme(); choiceTheme = false"
+            [class.circle]="themeAppService.themeDisplay() === appTheme.System"
+            [class.text-background]="themeAppService.themeDisplay() === appTheme.System"
+            class="items-center p-1.5 active:scale-90 transition-all duration-200 dark:text-clr-text-dark"
+        >
+            <lucide-icon 
+                [img]="icons.system" 
+                class="my-icon"></lucide-icon>
+        </button>
+        <span
+            (click)="themeAppService.setSystemTheme(); choiceTheme = false"
+            [class.circleNotBg]="themeAppService.themeDisplay() === appTheme.System"
+            class="flex lg:hidden font-text text-lg md:text-2xl">
+            System
+        </span>
+    </div>
 </div>

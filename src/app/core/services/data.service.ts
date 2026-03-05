@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { IProject, ISkill } from '../interfaces/interfaces';
+import { IFormation, IGallery, IProject, ISkill, IStudent } from '../interfaces/interfaces';
 
 @Injectable({
     providedIn: 'root'
@@ -11,6 +11,8 @@ export class DataService {
 
     private skillApi = environment.skillApiUrl
     private projectApi = environment.projectApiUrl
+    private galleryApi = environment.galleryApiUrl
+    private studentApi = environment.studentApiUrl
 
     constructor (private http: HttpClient) {}
 
@@ -21,20 +23,20 @@ export class DataService {
     getProject(): Observable<IProject[]>{
         return this.http.get<IProject[]>(this.projectApi)
     }
+
+    getGallery(): Observable<IGallery[]>{
+        return this.http.get<IGallery[]>(this.galleryApi)
+    }
+
+    getStudent(): Observable<IStudent[]>{
+        return this.http.get<IStudent[]>(this.studentApi)
+    }
+
+    // getStudents(): Observable {
+    //     return this.http.get(this.studentApi)
+    // }
+
+    // getFormation(): Observable<IStudent<IFormation>>{
+    //     return this.http.get<IStudent<IFormation>>(this.studentApi)
+    // }
 }
-
-// json data
-// ,
-//             {
-//             "image1": "assets/img/images/project/nathandev-portfolio-laptop.png",
-//             "image2": "assets/img/images/project/nathandev-portfolio-tablette.png",
-//             "image3": "assets/img/images/project/nathandev-portfolio-mobile.png",
-//             "image4": "assets/img/images/project/nathandev-portfolio-mini-mobile.png"
-//             }
-
-// {
-//             "image1": "",
-//             "image2": "",
-//             "image3": "",
-//             "image4": ""
-//         },

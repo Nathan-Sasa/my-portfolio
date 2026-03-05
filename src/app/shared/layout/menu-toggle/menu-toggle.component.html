@@ -1,1 +1,70 @@
-<p>menu-toggle.component works!</p>
+<!-- (click)="close()" -->
+<section
+    *ngIf="isOpen"
+    class="flex flex-col md:flex-row w-full min-h-32 p-4 items-start justify-between gap-4 || absolute z-10 top-18 left-1/2 -translate-x-1/2 rounded-xl border border-clr-border-dark/30 dark:border-clr-border-dark my-shadow || bg-clr-bg/80 dark:bg-clr-bg-dark/70  text-clr-text dark:text-clr-text-dark || rebond"
+    [ngClass]="{
+        'backdrop-blur-sm': isOpen
+    }"
+    >
+    <ul
+        class="flex flex-col items-start gap-y-4 px-0 mx-0 *:cursor-pointer md:w-1/2">
+        <span class="text-xl text-clr-title font-title dark:text-clr-title-dark mb-2">
+            Menu
+        </span>
+        <li>
+            <button
+                [routerLink]="['/landing']"
+                [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow', 'translate-x-4']"
+                (click)="close()"
+                class="text-lg font-text md:text-2xl dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                Accueil
+            </button>
+        </li>
+        <li>
+            <button
+                [routerLink]="['/portfolio']"
+                [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow', 'translate-x-4']"
+                (click)="close()"
+                class="text-lg font-text md:text-2xl dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                Portfolio
+            </button>
+        </li>
+        <li>
+            <button
+                [routerLink]="['/about']"
+                [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow', 'translate-x-4']"
+                (click)="close()"
+                class=" text-lg font-text md:text-2xl dark:text-clr-text-dark hover:text-clr-title dark:hover:text-clr-title-dark transition-all duration-200 cursor-pointer">
+                À propos
+            </button>
+        </li>
+        <li
+            class="w-full">
+            <button
+                [routerLink]="['/contact']"
+                (click)="close()"
+                class="w-full hidden md:flex lg:hidden items-center justify-center px-4 py-1.5 bg-clr-btn rounded-lg font-text text-clr-title-dark cursor-pointer hover:bg-clr-btn-hover transition-all duration-200 || active:scale-95">
+                Contact
+            </button>
+        </li>
+    </ul>
+    <ul
+        class="w-full flex flex-col items-start gap-y-4 px-0 mx-0 *:cursor-pointer md:w-1/2"
+        >
+        <span class="text-xl font-title text-clr-title dark:text-clr-title-dark mb-2">
+            Thème
+        </span>
+        <li>
+            <app-theme></app-theme>
+        </li>
+        <li
+            class="w-full">
+            <button
+                [routerLink]="['/contact']"
+                (click)="close()"
+                class="w-full flex md:hidden lg:hidden items-center justify-center mt-2 px-4 py-1.5 bg-clr-btn rounded-lg font-text text-clr-title-dark cursor-pointer hover:bg-clr-btn-hover transition-all duration-200 || active:scale-95">
+                Contact
+            </button>
+        </li>
+    </ul>
+</section>

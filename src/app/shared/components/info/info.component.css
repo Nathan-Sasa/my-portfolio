@@ -1,0 +1,9 @@
+.ton{
+    border-color: color-mix(in oklab, var(--color-clr-border-dark) 100%, transparent);
+    background-color: var(--color-clr-bg-section-dark);
+    
+    &:where(.dark, .dark *){
+        border-color: color-mix(in oklab, var(--color-clr-border-dark) 50%, transparent);
+        background-color: var(--color-clr-bg-section);
+    }
+}

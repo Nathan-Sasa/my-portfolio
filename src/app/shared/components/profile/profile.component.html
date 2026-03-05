@@ -1,0 +1,59 @@
+<section
+    class="w-full pt-28 pb-4 flex flex-col md:flex-row items-center justify-center md:justify-start max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5 gap-4 md:gap-8 || text-focus-in">
+    <div
+        class="max-md:w-full max-md:gap-2 relative flex max-md:items-center">
+        <img 
+            [src]="me.photo" 
+            alt="Nathan dev photo"
+            class="w-24 h-24 md:h-48  md:w-44 rounded-full md:rounded-lg border-2 border-clr-border-dark"
+        >
+        <div
+            class="md:hidden"
+            >
+            <h3 
+                class="flex md:hidden text-sm  font-text font-bold text-clr-title dark:text-clr-title-dark">
+                {{me.name}}
+            </h3>
+            <p 
+                class="text-xs flex items-center gap-2 dark:text-clr-text font-text">
+                <!-- <lucide-icon [img]="icons.location" class="my-icon"></lucide-icon> -->
+                {{me.address}}
+            </p>
+            <p
+                class="text-sm font-text text-clr-title dark:text-clr-text-dark mt-2">
+                {{me.carer}}
+            </p>
+        </div>
+    </div>
+    <div
+        class="flex flex-col items-start justify-between gap-2 max-md:w-full">
+        <h3 
+            class="hidden md:flex text-lg md:text-2xl xl:text-3xl font-text font-bold text-clr-title dark:text-clr-title-dark">
+            {{me.name}}
+        </h3>
+        <p 
+            class="hidden md:flex text-ms md:text-lg items-center gap-2 dark:text-clr-text font-text">
+            <lucide-icon [img]="icons.location" class="my-icon"></lucide-icon>
+            {{me.address}}
+        </p>
+        <p
+            class="hidden md:flex text-lg md:text-xl font-text text-clr-title dark:text-clr-text-dark mt-2">
+            {{me.carer}}
+        </p>
+        <div
+            class="flex items-center gap-4 max-md:w-full">
+            <a 
+                href=""
+                download="NathaDev-CV.pdf"
+                targe="_blank"
+                class="text-sm py-1.5 px-2.5 md:py-2 md:px-4 bg-clr-btn active:scale-95 hover:bg-clr-btn-hover rounded-lg text-clr-title-dark cursor-pointer transition-all duration-200">
+                Télécharger mov cv
+            </a>
+            <a
+                href="mailto:jonathanbikuta05@gmail.com?subject=Demande%20d'informations%20-%20Nathan%20Dev&body=Bonjour%20Nathan%20Dev%2C%0A%0A(Veillez%20éditer%20votre%20message.)%0A%0AMerci.%0A"
+                class="text-sm py-1.5 px-2.5 md:py-2 md:px-4 rounded-lg border border-clr-border-dark dark:border-clr-border-dark text-clr-text dark:text-clr-text-dark cursor-pointer transition-all duration-200 active:scale-95 hover:bg-clr-btn/20 dark:bg-clr-dark-card/50 dark:hover:bg-clr-dark-card">
+                Envoyer un mail
+            </a>
+        </div>
+    </div>
+</section>

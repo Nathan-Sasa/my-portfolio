@@ -1,5 +1,7 @@
 import { Injectable, signal, computed, PLATFORM_ID, inject, Renderer2 } from "@angular/core";
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
+import { BehaviorSubject } from "rxjs";
+import { App } from "../../app";
 
 export enum AppTheme {
     Light = 'light',
@@ -16,21 +18,25 @@ export class ThemeAppService {
     private readonly document = inject(DOCUMENT);
     // private renderer: Renderer2;
 
-    // Etat interne du thème
+    // Etat interne du thème ------------------------------------------------------------
     private _currentThemePreference = signal<AppTheme | null>(null);
 
-    // Thème effectif appliqué (dark ou light)
+    // Thème effectif appliqué (dark ou light) =====
     private readonly actualTheme = computed(() =>{
         const preference = this._currentThemePreference();
         if(preference === AppTheme.Dark) return AppTheme.Dark;
         if(preference === AppTheme.Light) return AppTheme.Light;
 
-        //  Si System, vérifier la préférence OS
+        //  Si System, vérifier la préférence OS =====================
         return this.prefersDarkScheme() ? AppTheme.Dark : AppTheme.Light;
     })
 
-    // Pour l'affichage dans 'UI
+    // Pour l'affichage dans 'UI ----------------------------------------------------------------------
     public readonly themeDisplay = this._currentThemePreference.asReadonly();
+
+    // map theme --------------------------------------------------------
+    private dark$ = new BehaviorSubject<boolean>(false)
+    readonly isDark$ = this.dark$.asObservable()
 
     constructor(
         
@@ -60,6 +66,8 @@ export class ThemeAppService {
 
         this._currentThemePreference.set(initializeTheme)
         this.applyTheme(this.actualTheme())
+        // this.appMapTheme(this.actualTheme())
+        // this.IsDark(this.actualTheme())
 
         // Ecouter les changements système si le thème est System
         if(initializeTheme === AppTheme.System){
@@ -67,22 +75,30 @@ export class ThemeAppService {
         }
     }
 
-    // Applique la class 'dark' à l'élément <html>
+    // Applique la class 'dark' à l'élément <html> ------------------------------------
     private applyTheme(theme: AppTheme): void {
         if(!isPlatformBrowser(this.platformId)) return;
 
         console.log('Applying theme:', theme);
+        this.appMapTheme(this.actualTheme())
 
         if(theme === AppTheme.Dark){
             this.document.documentElement.classList.add('dark')
+            
         }else{
             this.document.documentElement.classList.remove('dark')
         }
     }
+    
+    // mapTheme ------------------------------------------------------------------------------
+    public appMapTheme(theme: AppTheme){
+        this.dark$.next(theme === AppTheme.Dark);
+    }
 
-    // Gérer l'écoute du changement de préférence OS
+    // Gérer l'écoute du changement de préférence OS ------------------------
     private setupSystemThemeListerner(): void{
         if(!isPlatformBrowser(this.platformId)) return;
+
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) =>{
             // Appliquer la nouvelle préférence OS seulement si le mode est toujours 'System'
             if(this._currentThemePreference() == AppTheme.System){
@@ -115,5 +131,7 @@ export class ThemeAppService {
         this.applyTheme(this.actualTheme())
     }
 
-
+    // get current(): boolean{
+    //     return this.dark$.value
+    // }
 }

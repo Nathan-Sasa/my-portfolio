@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "text": "mon cursur d'apprentissage",
+        "formations": [
+            {
+                "domain": "Science Informatque",
+                "option": "Télécommunication et Réseau informatique",
+                "university": "ISIPA",
+                "grade": "Licence Bac+5",
+                "year": "2025"
+            },
+            {
+                "domain": "Science Informatique",
+                "option": "Techinque de Maintenance et Réseau Informatique",
+                "university": "ISIPA",
+                "grade": "Licence Bac+3",
+                "year": "2023"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "Python de basic au niveau professionnel",
+                "site": "FreeCodeCamp",
+                "date": "",
+                "current": true
+            },
+            {
+                "name": "Coding for Data",
+                "site": "SoloLearn",
+                "date": "2025-04-02",
+                "current": false
+            },
+            {
+                "name": "Python Developer",
+                "site": "SoloLearn",
+                "date": "2025-03-11",
+                "current": false
+            },
+            {
+                "name": "Angular",
+                "site": "SoloLearn",
+                "date": "2025-03-06",
+                "current": false
+            },
+            {
+                "name": "JavaScript Intermediate",
+                "site": "SoloLearn",
+                "date": "2025-02-19",
+                "current": false
+            },
+            {
+                "name": "Introduction to SQL",
+                "site": "SoloLearn",
+                "date": "2025-02-11",
+                "current": false
+            }
+        ]
+    }
+]

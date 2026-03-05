@@ -1,10 +1,11 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { HeaderComponent } from '../../shared/layout/header/header.component';
 import { HeroComponent } from '../../shared/components/hero/hero.component';
 import { WorkComponent } from '../../shared/components/work/work.component';
 import { SkillComponent } from '../../shared/components/skill/skill.component';
 import { ProjectComponent } from '../../shared/components/project/project.component';
 import { MeComponent } from '../../shared/components/me/me.component';
+import { FooterComponent } from '../../shared/layout/footer/footer.component'
 
 @Component({
 	selector: 'app-landing',
@@ -14,10 +15,12 @@ import { MeComponent } from '../../shared/components/me/me.component';
 		WorkComponent,
 		SkillComponent,
 		ProjectComponent,
-		MeComponent
+		MeComponent,
+		FooterComponent
 	],
 	templateUrl: './landing.component.html',
 	styleUrl: './landing.component.css',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LandingComponent {
 

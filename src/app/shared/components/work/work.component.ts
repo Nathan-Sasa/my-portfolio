@@ -10,7 +10,6 @@ import { ParallaxDirective } from '../../directive/parallax.directive';
 		CommonModule,
 		LucideAngularModule,
 		ScrollAnimDirective,
-		ParallaxDirective
     ],
     templateUrl: './work.component.html',
     styleUrl: './work.component.css',

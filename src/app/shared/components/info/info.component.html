@@ -1,0 +1,80 @@
+<section
+    class="w-full min-h-screen py-8 grid grid-cols-1 lg:grid-cols-2 max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5 gap-4 lg:gap-8">
+    <div
+        class="col-span-1 flex flex-col gap-4 border border-clr-border-dark dark:bg-clr-dark-card/30 p-4 rounded-xl || text-focus-in">
+        <h3
+            class="flex items-center gap-4 font-title text-sm md:text-lg lg:text-xl text-clr-title dark:text-clr-title-dark font-thin">
+            <lucide-icon [img]="icons.about" class="my-icon"></lucide-icon>
+            À propos
+        </h3>
+        <p
+            class="dark:text-clr-text-dark text-justify font-text">
+            {{about}}
+        </p>
+    </div>
+
+    <div
+        class="row-span-2 flex flex-col gap-8 border border-clr-border-dark dark:bg-clr-dark-card/30 p-4 rounded-xl || text-focus-in"
+        >
+        <h3
+            appScrollAnim
+            animType="blur"
+            class="flex items-center gap-4 font-title text-sm md:text-lg lg:text-xl text-clr-title dark:text-clr-title-dark font-thin">
+            <lucide-icon [img]="icons.about" class="my-icon"></lucide-icon>
+            Expérience professionnelle
+        </h3>
+        <div
+            class="">
+            @for (exp of exps; track $index) {
+                <div
+                    appScrollAnim
+                    animType="fade"
+                    class="flex items-center justify-between relative">
+                    <div
+                        class="flex items-center gap-8 px-2">
+                        <div
+                            class="w-1 h-32 relative bg-clr-border-dark/30">
+                            <span 
+                                class="p-1.5 rounded-full border-4 border-clr-border-dark/30 bg-clr-bg-section dark:bg-clr-dark-card  absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2"
+                                [ngClass]="{
+                                    'ton': exp.current
+                                }"
+                                ></span>
+                        </div>
+                        <p
+                            class="flex flex-col">
+                            <span class="font-title text-lg md:text-xl xl:text-2xl font-semibold text-clr-title dark:text-clr-title-dark">{{exp.post}}</span>
+                            <span class="font-text dark:text-clr-text-dark">{{exp.description}}</span>
+                        </p>
+                    </div>
+                    <span class="font-text dark:text-clr-text-dark">{{exp.year}}</span>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div
+        appScrollAnim
+        animType="blur"
+        class="border p-4 flex flex-col gap-8 border-clr-border-dark dark:bg-clr-dark-card/30 rounded-xl">
+        <h3
+            class="flex items-center gap-4 font-text text-sm md:text-lg lg:text-xl text-clr-title dark:text-clr-title-dark">
+            <lucide-icon [img]="icons.about" class="my-icon"></lucide-icon>
+            Stacks
+        </h3>
+        <div
+            class="flex items-center flex-wrap gap-4">
+            <div
+                class="flex items-center flex-wrap gap-4">
+                @for(stack of stacks; track $index){
+                    <div
+                        class="flex items-center gap-4 border border-clr-border-dark dark:bg-clr-dark-card rounded-lg px-2 py-1.5 dark:text-clr-text-dark">
+                        <i class="{{stack.icon}} {{stack.class}}"></i>
+                        <span class="font-text dark:text-clr-text-dark">{{stack.name}}</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+

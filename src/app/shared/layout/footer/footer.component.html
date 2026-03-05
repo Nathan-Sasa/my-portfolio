@@ -1,1 +1,140 @@
-<p>footer.component works!</p>
+<footer
+    class="w-full min-h-[90vh] flex flex-col gap-8 items-center justify-between pt-16 max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5">
+    <section
+        class="flex flex-col items-center gap-4 relative">
+        <div
+            class="flex items-center gap-4">
+            <img
+                [src]="app.logo" 
+                class="h-8 md:h-10 dark:invert"
+            >
+            <h2 
+                class=" font-text-accent text-lg md:text-xl font-bold text-clr-title dark:text-clr-title-dark">
+                {{app.name}}
+            </h2>
+        </div>
+        <div
+            class="flex p-4 gap-2">
+            @for(social of media; track $index){
+                <a
+                    [href]="social.link"
+                    class="group p-1.5 px-2 flex items-center justify-center rounded-lg border border-clr-border-dark/50 dark:border-clr-border-dark/80 bg-clr-bg-section dark:bg-clr-bg-section-dark hover:bg-clr-btn/20 dark:hover:bg-clr-btn-/20 backdrop-blur-sm transition-all duration-200"
+                    >
+                    <i class="{{social.icon}} text-2xl text-clr-text/50 group-hover:text-clr-accent-purple/80 transition-all duration-200"></i>
+                </a>
+            }
+        </div>
+        <a
+            href="https://wa.me/+243825854332?text=Bounjour%20Nathan%20Dev%20!%0A%0AJe%20besoin%20de%20vos%20services%20de%20developpement%20web"
+            target="_blank"
+            class="group h-24 w-full px-4 lg:w-5/4 border border-clr-border-dark/50 hover:border-clr-border-dark/20 rounded-lg flex items-center justify-around || bg-linear-150 max-lg:from-clr-accent-linear-blue/50 max-lg:to-clr-accent-violet-opacity/50 hover:from-clr-accent-linear-blue/50 hover:to-clr-accent-violet-opacity/50 transition-all duration-300">
+            <i class="bi bi-whatsapp text-2xl lg:text-3xl max-lg:text-white max-lg:dark:text-clr-title-dark group-hover:text-white dark:group-hover:text-clr-title-dark transition-all duration-300"></i>
+            <span
+                class="font-text group-hover:text-white max-lg:dark:text-clr-title-dark dark:text-clr-text-dark dark:group-hover:text-clr-title-dark transition-all duration-300">
+                Contactez-moi directement par mon whatsApp.
+            </span>
+            <i class="bi bi-arrow-right text-2xl max-lg:dark:text-clr-title-dark group-hover:text-white dark:group-hover:text-clr-title-dark transition-all duration-300"></i>
+        </a>
+    </section>
+
+    <section
+        class="w-full grid grid-cols-1 lg:grid-cols-2 gap-y-8 "
+    >
+        <div
+            class="flex flex-col items-start gap-4">
+            <h3
+                class="text-sm md:text-lg lg:text-xl font-title text-clr-title dark:text-clr-title-dark"
+                >
+                Explorez
+            </h3>
+            <ul>
+                <li
+                    class="group flex">
+                    <button 
+                        [routerLink]="['/landing']"
+                        [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-4 transition-all duration-200 cursor-pointer font-text">
+                        Acceuil
+                    </button>
+                </li>
+                <li
+                    class="group">
+                    <button 
+                        [routerLink]="['/portfolio']"
+                       [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-4 transition-all duration-200 cursor-pointer font-text">
+                        Portfolio
+                    </button>
+                </li>
+                <li
+                    class="group">
+                    <button 
+                        [routerLink]="['/about']"
+                       [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-4 transition-all duration-200 cursor-pointer font-text">
+                        À propos
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div
+            class="flex flex-col items-start gap-4">
+            <h3
+                class="text-sm md:text-lg lg:text-xl font-title text-clr-title dark:text-clr-title-dark"
+                >
+                Liens rapide
+            </h3>
+            <ul>
+                <li
+                    class="group">
+                    <button 
+                        [routerLink]="['/moi']"
+                        [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-2 transition-all duration-200 cursor-pointer font-text">
+                        Moi
+                    </button>
+                </li>
+                <li
+                    class="group">
+                    <button 
+                        [routerLink]="['/faq']"
+                       [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-4 transition-all duration-200 cursor-pointer font-text">
+                        Portfolio
+                    </button>
+                </li>
+                <li
+                    class="group">
+                    <button 
+                        [routerLink]="['/faq']"
+                       [routerLinkActive]="['text-clr-title', 'dark:text-clr-title-dark', 'my-text-shadow']"
+                        class="text-clr-text dark:text-clr-text-dark group-hover:text-clr-title dark:group-hover:text-clr-title-dark lg:group-hover:translate-x-4 transition-all duration-200 cursor-pointer font-text">
+                        Faq
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section
+        class="flex flex-col lg:flex-row w-full border-t border-clr-border-dark/50 dark:border-clr-border-dark items-center justify-between py-4">
+        <div
+            class="flex flex-col md:flex-row items-center">
+            <p
+                class="font-text md:pr-2 md:border-r-2 md:border-clr-border-dark/50 text-clr-text">
+                Website designed by <span class="text-clr-title dark:text-clr-text-dark font-title">Nathan Sasa</span>
+            </p>
+            <p
+                class="font-text md:pl-2 text-clr-text">
+                Website developed by <span class="text-clr-title dark:text-clr-text-dark font-title">Nathan Sasa</span>
+            </p>
+        </div>
+        <div
+            class="flex items-center text-clr-text">
+            <p
+                class="font-text">
+                Tout droit reservé <span class="text-clr-title dark:text-clr-text-dark font-title">&copy;2026</span>
+            </p>
+        </div>
+    </section>
+</footer>

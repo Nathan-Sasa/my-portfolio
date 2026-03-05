@@ -1,0 +1,24 @@
+<section
+    class="w-full pb-4 flex flex-col md:flex-row items-center justify-center md:justify-start max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5 gap-4 md:gap-8">
+    <div
+        appScrollAnim
+        animType="blur"
+        class="w-full flex flex-col gap-8 border border-clr-border-dark dark:bg-clr-dark-card/30 p-4 rounded-xl">
+        <h3
+            class="flex items-center gap-4 font-title text-sm md:text-lg lg:text-xl text-clr-title dark:text-clr-title-dark font-thin">
+            <lucide-icon [img]="icons.gallery" class="my-icon"></lucide-icon>
+            Gallerie
+        </h3>
+        <div
+            class="carousel w-full flex gap-4 overflow-y-hidden overflow-x-scroll"
+            >
+            @for(photo of gallery; track $index){
+                <img 
+                    [src]="photo.photo" 
+                    alt="Photo-gallery"
+                    class="items w-64 border-2 border-clr-border-dark rounded-lg"
+                >
+            }
+        </div>
+    </div>
+</section>

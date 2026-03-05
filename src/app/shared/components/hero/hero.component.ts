@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { TextWriterDirective } from '../../directive/textwriter.directive';
 import { RouterModule } from '@angular/router';
 
@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 	],
 	templateUrl: './hero.component.html',
 	styleUrl: './hero.component.css',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeroComponent {
 

@@ -23,6 +23,12 @@
             (click)="scrollToTop(); backPop = true; selectedSkill = skill; fixeBodyScroll()"
             class="px-2 py-1 flex items-center justify-center gap-2 rounded-lg border border-clr-border-dark/50 dark:border-clr-border-dark/80 bg-clr-bg dark:bg-clr-dark-card/50 dark:hover:bg-clr-dark-card-hover/50 backdrop-blur-sm dark:text-clr-text-dark hover:scale-105 hover:cursor-pointer transition-all duration-300 || hover-shadow">
             <i class="{{skill.icon}} {{skill.class}} text-lg md:text-2xl text-clr-accent-y"></i>
+            <img 
+                *ngIf="skill.image" 
+                [src]="skill.image" 
+                alt=""
+                class="h-5"
+            >
             <span>{{skill.name}}</span>
         </article>
     </div>
@@ -46,6 +52,12 @@
             <div
                 class="h-2/8 py-4 w-full flex flex-col gap-2 items-center justify-center border-b border-clr-border-dark/40 dark:border-clr-border-dark text-clr-text dark:text-clr-text-dark">
                 <i class="{{selectedSkill.icon}} {{selectedSkill.class}} text-3xl md:text-5xl xl:text-6xl"></i>
+                <img
+                    *ngIf="selectedSkill.image"
+                    [src]="selectedSkill.image"
+                    alt=""
+                    class="h-10"
+                >
                 <p>Niveau: <span class="font-linear-color font-semibold text-clr-text dark:text-clr-text-dark">{{selectedSkill.level}}</span></p>
             </div>
             <div
@@ -73,7 +85,7 @@
     </div>
 
     <!-- tsParticle -->
-     <ngx-particles
+    <ngx-particles
         id="tsparticles"
         [options]="particlesOptions"
         (particlesLoaded)="particlesLoaded($event)"

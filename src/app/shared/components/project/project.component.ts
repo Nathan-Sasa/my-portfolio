@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { ScrollAnimDirective } from '../../directive/scroll-anim.directive';
+import { ScrollStoryDirective } from '../../directive/scroll-story.directive'
 import { DataService } from '../../../core/services/data.service';
 import { IProject } from '../../../core/interfaces/interfaces';
 import { RouterModule } from '@angular/router';
@@ -14,6 +15,7 @@ import { LucideAngularModule, LinkIcon, InfoIcon, XIcon } from 'lucide-angular';
 		FormsModule,
 		RouterModule,
 		ScrollAnimDirective,
+		ScrollStoryDirective,
 		LucideAngularModule
 	],
 	templateUrl: './project.component.html',
@@ -96,12 +98,14 @@ export class ProjectComponent implements OnInit {
 
 	closePop(): void {
 		this.closedProjectPop = true
+		this.projectBackPop = false
 		setTimeout(() => {
-			this.projectBackPop = false
 			this.closedProjectPop = false
 			this.selectedProject = null
 			this.renderer.removeClass(document.body, 'overflow-y-hidden')
 			// console.log('selectedSkill : ', this.selectedSkill)
+
+			console.log(this.projectBackPop)
 		}, 300)
 	}
 

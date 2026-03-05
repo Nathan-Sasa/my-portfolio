@@ -1,14 +1,14 @@
 .banner {
     background-image: conic-gradient(
         from var(--rotate), 
-        var(--color-clr-accent-purple) 50%,
+        var(--color-clr-accent-red) 50%,
         var(--color-clr-bg)
     );
     animation: eff 5s linear infinite;
     &:where(.dark, .dark *){
         background-image: conic-gradient(
         from var(--rotate), 
-        var(--color-clr-accent-purple) 10%,
+        var(--color-clr-accent-red) 10%,
         var(--color-clr-bg-dark) 80%
     );
     }

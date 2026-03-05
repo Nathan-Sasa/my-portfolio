@@ -8,7 +8,6 @@ import { LucideAngularModule, FileIcon, SearchCode } from 'lucide-angular';
 	selector: 'app-root',
 	imports: [
 		RouterOutlet,
-		ThemeComponent,
 		LucideAngularModule
 	],
 	templateUrl: './app.html',

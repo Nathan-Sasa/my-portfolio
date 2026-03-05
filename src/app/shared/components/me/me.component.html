@@ -1,31 +1,69 @@
 <section
-    class="w-full min-h-screen py-20 flex flex-col items-center justify-center max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5 gap-16 bg-clr-bg-section dark:bg-clr-bg-section-dark mt-8"
+    class="w-full min-h-screen py-20 flex flex-col items-center justify-center max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5 gap-16 bg-clr-bg-section dark:bg-clr-bg-section-dark mt-8 relative"
     >
     <h2
         appScrollAnim
         animType="fade"
-        class="max-[321px]:text-xl text-3xl md:text-5xl xl:text-6xl font-bold font-text-accent text-clr-title dark:text-clr-title-dark text-center mb-4"
+        class="max-[321px]:text-xl text-3xl md:text-5xl xl:text-6xl font-bold font-text-accent text-clr-title dark:text-clr-title-dark text-center mb-4 z-2"
         >
-        Savoir <span class="font-linear-color">plus sur moi</span> et <span class="font-linear-color"> mon parcours</span>
+        <span class="font-linear-color">Moi</span> et mon<span class="font-linear-color"> parcours</span>
     </h2>
 
     <div
-        class="w-full flex flex-col lg:flex-row relative">
+        class="w-full flex flex-col lg:flex-row gap-8 relative z-2">
         <div
             class="w-full lg:w-1/2 h-full flex flex-col items-center justify-center relative">
             <div
+                appScrollStory
                 class="banner p-1 relative rounded-lg"
                 >
-                <img 
-                    [src]="me.photo" 
-                    alt="Nathan dev photo"
-                    class="bg-clr-bg dark:bg-clr-bg-dark w-44 object-fill rounded-sm"
-                >
+                <div
+                    class="bg-clr-bg dark:bg-clr-bg-section-dark rounded-sm overflow-hidden relative">
+                    <img 
+                        [src]="me.photo" 
+                        alt="Nathan dev photo"
+                        class=" w-44 xl:w-52 object-fill rounded-sm"
+                    >
+                </div>
             </div>
         </div>
         <div
-            class="w-full lg:w-1/2 flex flex-col">
-
+            appScrollAnim
+            animType="blur"
+            class="w-full lg:w-1/2 py-4 lg:py-0 flex flex-col items-center lg:items-start gap-8 lg:gap-4 font-text dark:text-clr-text-dark text-sm md:text-lg xl:textxl">
+            <p
+                class="text-center lg:text-left font-text"
+                >
+                Je m'appelle <span class="font-linear-color font-accent-title">Nathan BIKUTA SASA</span>
+            </p>
+            <p 
+                class="text-center lg:text-left font-text"
+                >
+                Je suis <span class="font-linear-color font-accent-title text-center lg:text-left">développeur web</span> depuis 2 ans, je travaille principalement sur le frontend.
+            </p>
+            <p 
+                class="text-center lg:text-left font-text"
+                >
+                En quête défis professionnels stimulants et apprendre toujours plus pour évoluer vers un profil de développeur plus complet.  je suis enthousiaste à l’idée de rejoindre votre équipe, d'une potentielle collaboration ou de vous aider réaliser votre projet, idée en un produit digital complet.
+            </p>
+            <p 
+                class="text-center lg:text-left "
+                >
+                vous pouvez en savoir plus sur moi, en cliquant sur le bouton ci-dessous !
+            </p>
+            <button
+                [routerLink]="['/about']"
+                class="w-1/2 lg:w-full flex items-center justify-center py-2 border border-clr-border-dark/50 dark:bg-clr-bg-dark dark:border-clr-border-dark rounded-lg hover:bg-clr-btn-hover/20 dark:hover:bg-clr-btn-hover/20 active:scale-95 cursor-pointer transition-all duration-300 font-text"
+                >
+                En savoir plus
+            </button>
         </div>
     </div>
+    <ngx-particles
+        id="tsparticle"
+        [options]="particlesOptions"
+        (particlesLoaded)="particlesLoaded($event)"
+        [particlesInit]="particlesInit"
+        class="absolute w-full h-full top-0 z-1"
+    ></ngx-particles>
 </section>

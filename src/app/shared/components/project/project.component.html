@@ -1,5 +1,5 @@
 <section
-    class="w-full min-h-screen py-20 flex flex-col items-center justify-center">
+    class="w-full min-h-screen py-20 flex flex-col items-center justify-center max-[768px]:px-2.5 max-[769px]:px-4.5 md:px-5 lg:px-7.5 xl:px-8.5">
     <h2
         appScrollAnim
         animType="fade"
@@ -16,7 +16,7 @@
     
     <div
         #projectTop
-        class="w-full flex flex-col gap-12 relative px-9 mt-16 pt-20 md:pt-24">
+        class="w-full flex flex-col gap-12 relative mt-16 pt-20 md:pt-24">
         <div
             class="w-full flex items-center gap-8 justify-between">
            <button 
@@ -115,6 +115,7 @@
             #scrollPop
             class="w-full grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-16 gap-x-16">
             <article
+                appScrollStory
                 *ngFor="let project of projectFiltered"
                 class="group flex flex-col justify-between relative cursor-pointer rounded-2xl hover:border hover:border-clr-border-dark/30 md:hover:bg-clr-btn-hover/20 dark:hover:border-clr-border-dark/80 md:dark:hover:bg-clr-dark-card/50 hover:transition-all hover:duration-300"
                 [title]="project.name"
@@ -152,84 +153,87 @@
             </article>
 
             <!-- popup projects -->
-            <div
-                *ngIf="projectBackPop"
-                class="w-full h-screen flex justify-center items-center inset-0 fixed top-0 bg-clr-bg-dark/20 backdrop-blur-sm z-11 overflow-hidden">
-                <article
-                    class="w-9/10 md:w-8/10 lg:w-7/10 max-h-9/10 h-7/10 lg:h-10/10 md:max-h-7/10 bg-clr-bg-section/80 dark:bg-clr-dark-card/60 backdrop-blur-2xl border border-clr-border-dark/40 dark:border-clr-border-dark rounded-lg md:rounded-2xl transition-all duration-300 ||  absolute opacity-0 || flex flex-col items-center justify-between"
-                    [ngClass]="{
-                        'pop': projectBackPop === true,
-                        'closePop': closedProjectPop === true
-                    }"
-                >
-                    <button
-                        (click)="closePop(); fixeBodyScroll();"
-                        class="absolute -translate-y-1/2 translate-x-1/2 -top-7 right-2 cursor-pointer h-10 w-10 flex items-center justify-center rounded-full bg-clr-btn hover:bg-clr-btn-hover text-clr-title-dark hover:scale-125 transition-all duration-200">
-                        <lucide-icon [img]="icons.xIcon" class=""></lucide-icon>
-                    </button>
-                    <div
-                        class="w-full flex flex-col justify-center items-center py-4 h-2/10 border-b">
-                        <h2 class="text-clr-title dark:text-clr-title-dark text-sm md:text-lg lg:text-2xl font-semibold font-text-accent"> {{selectedProject.name}}</h2>
-                        <a 
-                            [href]="selectedProject.link"
-                            target="_blank"
-                            class="text-clr-text text-xs md:text-sm lg:text-lg flex items-center gap-2 relative group hover:text-clr-text-dark transition-all duration-200 font-text">
-                            <span>
-                                {{selectedProject.link}}
-                            </span>
-                            <lucide-icon 
-                                [img]="icons.linkIcon"
-                                class="absolute text-xs md:text-sm lg:text-lg -right-3 -translate-y-1/2 lg:opacity-0 group-hover:opacity-100 transition-all duration-200">
-                            </lucide-icon>
-                        </a>
-                    </div>
-                    <div
-                        class="carousel flex overflow-y-hidden overflow-x-scroll gap-4 h-2/10 w-6/10 md:w-4/10 lg:w-2/10 lg:h-2/10 relative">
-                        @for (img of selectedProject.images; track $index) {
-                            <img
-                                [src]="img.image"
-                                [alt]="img.image"
-                                class="items"
-                            >
-                        }
-                    </div>
-                    <div
-                        class="w-full flex flex-col gap-8 h-6/10 lg:h-5/10 pt-8 dark:text-clr-text px-4 font-text">
+            @if(projectBackPop){
+                <!-- *ngIf="projectBackPop" -->
+                <div
+                    class="w-full h-screen flex justify-center items-center inset-0 fixed top-0 bg-clr-bg-dark/20 backdrop-blur-sm z-11 overflow-hidden">
+                    <article
+                        class="w-9/10 md:w-8/10 lg:w-7/10 max-h-9/10 h-7/10 lg:h-10/10 md:max-h-7/10 bg-clr-bg-section/80 dark:bg-clr-dark-card/60 backdrop-blur-2xl border border-clr-border-dark/40 dark:border-clr-border-dark rounded-lg md:rounded-2xl transition-all duration-300 ||  absolute opacity-0 || flex flex-col items-center justify-between"
+                        [ngClass]="{
+                            'pop': projectBackPop === true,
+                            'closePop': closedProjectPop === true
+                        }"
+                    >
+                        <button
+                            (click)="closePop(); fixeBodyScroll();"
+                            class="absolute -translate-y-1/2 translate-x-1/2 -top-7 right-2 cursor-pointer h-10 w-10 flex items-center justify-center rounded-full bg-clr-btn hover:bg-clr-btn-hover text-clr-title-dark hover:scale-125 transition-all duration-200">
+                            <lucide-icon [img]="icons.xIcon" class=""></lucide-icon>
+                        </button>
                         <div
-                            class="w-full flex flex-col">
-                            <div
-                                class="flex items-center gap-2"
-                                >
-                                <!-- <span class="dark:text-clr-text-dark">Techno : </span> -->
-                                @for(stack of selectedProject.stacks; track $index){
-                                    <i
-                                        class="{{stack.stack}} {{stack.class}} mr-0.5 md:mr-1 text-lg md:text-lg lg:text-2xl"
-                                    ></i>
-                                }
-                            </div>
-                            <div
-                                class="flex items-center gap-2 pt-4"
-                                >
-                                <!-- <span class="dark:text-clr-text-dark">Durée : </span> -->
-                                <p class="text-xs md:text-sm lg:text-lg text-clr-text dark:text-clr-text-dark">{{selectedProject.time}}</p>
-                            </div>
-                            <div
-                                class="flex items-center gap-2"
-                                >
-                                <!-- <span class="dark:text-clr-text-dark">Date : </span> -->
-                                <p class="text-xs md:text-sm lg:text-lg text-clr-text  dark:text-clr-text-dark">{{selectedProject.date | date}}</p>
-                            </div>
+                            class="w-full flex flex-col justify-center items-center py-4 h-2/10 border-b">
+                            <h2 class="text-clr-title dark:text-clr-title-dark text-sm md:text-lg lg:text-2xl font-semibold font-text-accent"> {{selectedProject.name}}</h2>
+                            <a 
+                                [href]="selectedProject.link"
+                                target="_blank"
+                                class="text-clr-text text-xs md:text-sm lg:text-lg flex items-center gap-2 relative group hover:text-clr-text-dark transition-all duration-200 font-text">
+                                <span>
+                                    {{selectedProject.link}}
+                                </span>
+                                <lucide-icon 
+                                    [img]="icons.linkIcon"
+                                    class="absolute text-xs md:text-sm lg:text-lg -right-3 -translate-y-1/2 lg:opacity-0 group-hover:opacity-100 transition-all duration-200">
+                                </lucide-icon>
+                            </a>
                         </div>
                         <div
-                            class="text-left">
-                            <p
-                                class="text-sm md:text-lg lg:text-lg xl:text-lg text-clr-text  dark:text-clr-text-dark font-text font-extralight">
-                                {{selectedProject.description}}
-                            </p>
+                            class="carousel flex overflow-y-hidden overflow-x-scroll gap-4 h-2/10 w-6/10 md:w-4/10 lg:w-2/10 lg:h-2/10 relative">
+                            @for (img of selectedProject.images; track $index) {
+                                <img
+                                    [src]="img.image"
+                                    [alt]="img.image"
+                                    class="items"
+                                >
+                            }
                         </div>
-                    </div>
-                </article>
-            </div>
+                        <div
+                            class="w-full flex flex-col gap-8 h-6/10 lg:h-5/10 pt-8 dark:text-clr-text px-4 font-text">
+                            <div
+                                class="w-full flex flex-col">
+                                <div
+                                    class="flex items-center gap-2"
+                                    >
+                                    <!-- <span class="dark:text-clr-text-dark">Techno : </span> -->
+                                    @for(stack of selectedProject.stacks; track $index){
+                                        <i
+                                            class="{{stack.stack}} {{stack.class}} mr-0.5 md:mr-1 text-lg md:text-lg lg:text-2xl"
+                                        ></i>
+                                    }
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 pt-4"
+                                    >
+                                    <!-- <span class="dark:text-clr-text-dark">Durée : </span> -->
+                                    <p class="text-xs md:text-sm lg:text-lg text-clr-text dark:text-clr-text-dark">{{selectedProject.time}}</p>
+                                </div>
+                                <div
+                                    class="flex items-center gap-2"
+                                    >
+                                    <!-- <span class="dark:text-clr-text-dark">Date : </span> -->
+                                    <p class="text-xs md:text-sm lg:text-lg text-clr-text  dark:text-clr-text-dark">{{selectedProject.date | date}}</p>
+                                </div>
+                            </div>
+                            <div
+                                class="text-left">
+                                <p
+                                    class="text-sm md:text-lg lg:text-lg xl:text-lg text-clr-text  dark:text-clr-text-dark font-text font-extralight">
+                                    {{selectedProject.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            }
         </div>
     </div>
 </section>
+

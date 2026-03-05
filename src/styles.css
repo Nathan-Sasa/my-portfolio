@@ -131,7 +131,6 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
-
 .angular-color{
     background: linear-gradient(180deg, var(--color-clr-accent-red), var(--color-clr-accent-linear-blue)80%) 100%;
     -webkit-background-clip: text;
@@ -175,9 +174,27 @@ main {
 .circle {
     border-radius: 50%;
     background-color: color-mix(in oklab, var(--color-clr-btn) 50%, transparent);
+    color: var(--color-clr-title);
     &:where(.dark, .dark *){
         color: var(--color-clr-title-dark);
     }
+}
+.circleNotBg {
+    border-radius: 50%;
+    color: var(--color-clr-title);
+    &:where(.dark, .dark *){
+        color: var(--color-clr-title-dark);
+    }
+}
+
+/* carousel  */
+.carousel{
+    scroll-snap-type: x mandatory;
+}
+.items{
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    /* border-radius: 16px; */
 }
 
 
