@@ -81,6 +81,7 @@ export class ThemeAppService {
 
         console.log('Applying theme:', theme);
         this.appMapTheme(this.actualTheme())
+        this.current
 
         if(theme === AppTheme.Dark){
             this.document.documentElement.classList.add('dark')
@@ -131,6 +132,14 @@ export class ThemeAppService {
         this.applyTheme(this.actualTheme())
     }
 
+    get current(): boolean{
+        let dark = false
+        this.isDark$.subscribe(p =>{
+            dark = p
+        })
+
+        return dark
+    }
     // get current(): boolean{
     //     return this.dark$.value
     // }
