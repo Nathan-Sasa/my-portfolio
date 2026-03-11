@@ -20,7 +20,7 @@
         "name": "JavaScript",
         "icon": "ri-javascript-fill",
         "level": 80,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Language fondemmental du web que j'utilise pour implementer la logique applicative, manipuler le DOM, gérer les évenements et créer des interactions dynamiques côté client.",
         "class": "text-clr-accent-yellow"
     },
     {
@@ -28,7 +28,7 @@
         "name": "TypeScript",
         "icon": "bi bi-typescript",
         "level": 75,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Surcouche typée de JavaScript que j'utilise  pour améliorer la robustesse, la maintenabilité et la lisibité du code, notamment dans le développement d'applications Angular.",
         "class": "text-clr-accent-linear-blue"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Angular",
         "icon": "ri-angularjs-line",
         "level": 70,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Framework principal que j'utilise pour développer des applications web modernes et structurées. Avec Angular, je conçois des interfaces dynamiques basées sur des composants, j'implemente le routing, la gestion ds états, l'intégration d'API et des architecture maintenables adaptables aux projets de moyenne et grandee envergure.",
         "class": "angular-color"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Tailwind CSS",
         "icon": "ri-tailwind-css-fill",
         "level": 70,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Framework CSS utilitaire que j'utilise pour contruire rapidement des interfaces modernes, reonsives et cohérentes tout en gardant un contrôle précis sur le design.",
         "class": "text-clr-accent-text"
     },
     {
@@ -52,7 +52,7 @@
         "name": "React",
         "icon": "ri-reactjs-fill",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Bibliothèque JavaScript utilisé pour créer des interfaces utilisateurs rapides et interactives. J'utilise pour contruire des componants réutilisables et développer des applictions web performantes, en complément de mon expertise principale avec Angular.",
         "class": "text-blue-400"
     },
     {
@@ -68,7 +68,7 @@
         "name": "Github",
         "icon": "ri-github-fill",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Plateforme que j'utilise pour héberger mes projets, gérer les versions du code et partager mes travaux avec d;autres développeurs.",
         "class": "text-black dark:text-clr-text-dark"
     },
     {
@@ -76,7 +76,7 @@
         "name": "Git",
         "icon": "bi bi-git",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Outil de gestion de version indispensable que j''utilise pour suivre l'évolution du code, gérer les versions et collaborer efficacement sur les projets.",
         "class": "text-orange-500"
     },
     {
@@ -84,7 +84,7 @@
         "name": "Vercel",
         "icon": "ri-vercel-fill",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Plateforme de déploiement que j'utilise pour publier et héberger mes applications web, notamment les projets frontend.",
         "class": "text-black dark:text-clr-title-dark"
     },
     {
@@ -108,7 +108,7 @@
         "name": "Firebase",
         "icon": "ri-firebase-fill",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Plateforme backend que j'utilise pour gérer rapidement des fontionnalités comme le stockage de données en temps réel, l'authentifiaction ou les commentaires dans les applications web.",
         "class": "text-amber-500"
     },
     {
@@ -116,7 +116,7 @@
         "name": "Supabase",
         "icon": "ri-supabase-fill",
         "level": 65,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cumque doloribus! Illum autem impedit reprehenderit consequatur ut nulla, provident fugit asperiores commodi sed fugiat. Culpa ducimus obcaecati accusantium doloremque, nemo debitis vel molestias saepe amet temporibus repellendus cum officia? Perferendis voluptatem id nisi fuga impedit consequuntur asperiores blanditiis rerum, laboriosam repellat dolores, ad eos nulla suscipit, at esse iure. Non illum adipisci laboriosam optio consequatur veritatis excepturi totam quasi. Reiciendis repudiandae, cupiditate repellendus odio delectus iusto at. Nam facere illum dolor culpa, dolorum consequuntur obcaecati odio velit eius quaerat facilis!",
+        "description": "Backend open-source basé sur PostgreSQL que j'utilise pour gérer l'authentification, les bases de données et certaines fonctionnalités backend directement depuis l'applications web.",
         "class": "text-clr-accent-green"
     },
     {

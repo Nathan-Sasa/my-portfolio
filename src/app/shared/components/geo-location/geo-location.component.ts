@@ -57,50 +57,99 @@ export class GeoLocationComponent implements OnInit, AfterViewInit {
 		this.initMap()
 	}
 
-	initMap(): void {
+	public initMap(): void {
 
 
 		// let dark = false
 
 		this.themeService.isDark$.subscribe(isDark => {
-			// dark = isDark
+			let dark = signal(isDark)
+			console.log("signal dark: ", dark())
 
-			// container: this.mapContainer.nativeElement,
 			this.map = new maplibregl.Map({
 				container: 'mapContainer',
-				center: [15.2663, -4.4419],
-				zoom: 10,
-				style: isDark ? map_style_dark : map_style_light
+				// style: 'https://demotiles.maplibre.org/style.json',
+				// style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+				// style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+				style: dark() ? map_style_dark : map_style_light,
+				center: [15.2663, -4.4419], // les coordonées de kinshasa
+				zoom: 11
 			})
-	
+
+			// les controls
 			this.map.addControl(new maplibregl.NavigationControl())
-	
-			const el = this.document.createElement('div')
-			el.style.height = '20px'
-			el.style.width= '20px'
-			el.style.background = 'var(--color-clr-btn)'
+
+			// custom icon marker
+			const el = document.createElement('div');
+			el.style.width = '20px';
+			el.style.height = '20px';
+			el.style.backgroundColor = '#4f57c4';
 			el.style.borderRadius = '50%'
-			el.style.border = '2px solid var(--color-clr-accent-violet-opacity)'
-	
-			const marker = new maplibregl.Marker({color: 'var(#0080FF)'})
+			el.style.border = '2px solid #fff'
+
+			const marker = new maplibregl.Marker({color: 'var(--color-clr-btn)' })
 				.setLngLat([15.2663, -4.4419])
-				.addTo(this.map)
-	
-	
-			const popup = new maplibregl.Popup({
+				.addTo(this.map);
+
+			//popup infos 
+			const popup = new maplibregl.Popup({ 
 				offset: 25,
-				closeButton: true,
-				closeOnClick: false
-			})
+				closeButton: false,
+				// closeOnClick: false
+				})
+				.setHTML(
+					`<h3 class="text-clr-accent font-mono font-semibold"></h3>
+					<img src="" class="w-44 h-24 rounded-lg object-center my-2" alt="Map Marker" />
+					<p>Kinshasa, RDC</p>
+					`
+				);
+			marker.setPopup(popup);
+
+			// Marker Hover effect
+			const markerElement = marker.getElement();
+			markerElement.addEventListener('mouseenter', () => popup.addTo(this.map).setLngLat([15.2663, -4.4419]));
+			markerElement.addEventListener('mouseleave', () => popup.remove());
+
+			// =======================================================
+
+
+			// this.map = new maplibregl.Map({
+			// 	container: 'mapContainer',
+			// 	center: [15.2663, -4.4419], //
+			// 	zoom: 11,
+			// 	style: dark() ? map_style_dark : map_style_light
+			// })
 	
-			.setHTML(
-				`<h3 class="text-clr-title font-accent">Nathan BIkuta</h3>`
-			)
-			marker.setPopup(popup)
+			// this.map.addControl(new maplibregl.NavigationControl())
 	
-			const markerElement = marker.getElement()
-			markerElement.addEventListener('mouseenter', () => popup.addTo(this.map).setLngLat([15.2663, -4.4419]))
-			markerElement.addEventListener('mouseleave', ()=> popup.remove())
+			// const el = this.document.createElement('div')
+			// el.style.height = '20px'
+			// el.style.width= '20px'
+			// el.style.background = 'var(--color-clr-btn)'
+			// el.style.borderRadius = '50%'
+			// el.style.border = '2px solid var(--color-clr-accent-violet-opacity)'
+
+			
+	
+			// const marker = new maplibregl.Marker({color: '#4f57c4' })
+			// 	.setLngLat([15.2663, -4.4419])
+			// 	.addTo(this.map);
+
+			
+			// const popup = new maplibregl.Popup({
+			// 	offset: 25,
+			// 	closeButton: true,
+			// 	closeOnClick: false
+			// })
+	
+			// popup.setHTML(
+			// 	`<h3 class="text-clr-title font-accent">Nathan BIkuta</h3>`
+			// )
+			// marker.setPopup(popup)
+	
+			// const markerElement = marker.getElement()
+			// markerElement.addEventListener('mouseenter', () => popup.addTo(this.map).setLngLat([15.2663, -4.4419]))
+			// markerElement.addEventListener('mouseleave', ()=> popup.remove())
 		})
 
 		// this.map.on('load', () => {

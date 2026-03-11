@@ -32,7 +32,17 @@ export class InfoComponent implements OnInit{
         about: InfoIcon
     }
 
-    about = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quia suscipit dolore. Aspernatur sequi enim explicabo accusantium ex, facilis maxime nemo distinctio omnis natus perspiciatis voluptatum ratione quaerat laudantium deserunt laboriosam at ducimus necessitatibus molestias! Adipisci odit ea quam, quisquam nulla voluptas praesentium animi aliquid officia reiciendis accusamus laboriosam debitis neque qui saepe. Dolorem nesciunt aut iste iure vel cum reiciendis explicabo error dolores? Ex dolores, veritatis quod possimus consequatur voluptatem dolor explicabo nostrum non ipsa vero nam quam earum, aliquam molestiae beatae dolorem animi, consectetur labore est? Porro mollitia fugit voluptatum, modi eveniet autem expedita temporibus reprehenderit sint voluptatem!"
+    about = `Développeur web spécialisé en frontend, je coiçois et développe des applications zeb modernes; interactives et perfomantes. Je trvaille principalement avec JavaScript et TypeScript en utilisant de frameworks comme Angular et React pour créer des interfaces dynamique connectées à des API.  
+    
+    \n \n \n \n
+    
+    À mon quotidien, j'utilise également Tailwind CSS et Git afin de maintenir un workflow de développement structuré et collaboratif. J'ai déjà participé à la conception de plusieurs projets zeb incluant lùintegration d'API, la gestion de données et le déploiement d'applications. 
+
+    \n \n \n
+
+    Passioné par  l'ingénierie logicille et l'apprentissage  continu, je poursuis actuellement l'élargissement de mes compétence vers le backend. Je consolide notamment mes connaissances en Python, SQL et Spring Boot afin d'évoluer vers uj profil de développeur full-stack.
+    
+    `
 
     exps = [
         {

@@ -1,6 +1,7 @@
 <header
     appViewOnScrollTop
-    class="flex w-19/20 h-16 px-4 items-center justify-between gap-4 fixed z-10 max-sm:top-2 top-4 left-1/2 -translate-x-1/2 rounded-xl border border-clr-border-dark/30 dark:border-clr-border-dark my-shadow || bg-clr-bg/80 dark:bg-clr-bg-dark/70 || rebond transition-all durations-300"
+    class="flex w-19/20 h-16 px-4 items-center justify-between gap-4 fixed z-10 max-sm:top-2 top-4 left-1/2 -translate-x-1/2 rounded-xl border border-clr-border-dark/30 dark:border-clr-border-dark my-shadow || bg-clr-bg/80 dark:bg-clr-bg-dark/70 || rebond transition-all duration-300"
+    [class.-translate-y-2/1]="!navbarVisible"
     [ngClass]="{
         'backdrop-blur-sm': !isMenuOpen,
         'dark:bg-clr-bg-dark!': isMenuOpen

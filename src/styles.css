@@ -56,7 +56,7 @@
 	--color-clr-text-error: #FF4500;
 
     
-	/* accent color ------------------------------ */
+	/* box color ------------------------------ */
     --color-clr-accent: #000000;
 
     --color-clr-btn: #0080FF; /*okay*/
@@ -68,12 +68,11 @@
 	--color-clr-border: #2626260a;
     --color-clr-border-dark: #444746; /*okay*/
 
-    /* autres */
+    /* accent  -----------------------------------------*/
     --color-clr-accent-text: #67E8F9; /*okay*/
 
     --color-clr-accent-violet: #7C3AED; /*okay*/
     --color-clr-accent-violet-opacity: #8B5CF6; /*okay*/
-    
     --color-clr-accent-status-green: #22C55E; /*okay*/
     --color-clr-accent-green: #10A37F; /*okay*/
     --color-clr-accent-green-hover: #10B981; /*okay*/
@@ -88,22 +87,12 @@
     --color-clr-accent-chocolateOrange: #FF9F43; /*okay*/
     --color-clr-accent-linear-blue: #2563EB; /*okay*/
     --color-clr-accent-red: #da0a0a; /*okay*/
+    --color-clr-accent-error: #ff4500;
 }
 
-main {
-    color: #c4000000;/*color bg*/
-    color: #F8FAFC; /*color bg*/
-    color: #111827; /*color bg dark*/
-
-    color: #111827; /*color title*/
-    color: #E2E8F0; /*color title dark*/
-
-    color: #6B7280; /*color text*/
-    color: #9CA3AF; /*color text dark*/
-    color: #67E8F9; /*color accent text*/
-
-    color: #444746; /*color btn*/
-}
+/* main {
+    color: #ff4500;
+} */
 
 .lucide {
     width: 20px;

@@ -1,0 +1,9 @@
+.maplibregl-ctrl-top-left,
+.maplibregl-ctrl-top-right{
+	top: calc(56px + env(safe-area-inset-top));
+}
+
+.maplibregl-ctrl-group {
+    border-radius: 4px;
+    background: #425ac1;
+}

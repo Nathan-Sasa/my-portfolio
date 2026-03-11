@@ -22,23 +22,28 @@ export class FooterComponent {
 	media = [
 		{
 			icon: 'ri-github-fill',
-			link: ''
+			link: 'https://github.com/Nathan-Sasa',
+			class: 'group-hover:text-clr-title dark:group-hover:text-clr-title-dark'
 		},
 		{
 			icon: 'bi bi-facebook',
-			link: ''
+			link: '',
+			class: 'group-hover:text-clr-accent-linear-blue'
 		},
 		{
 			icon: 'bi bi-instagram',
-			link: ''
+			link: 'https://www.instagram.com/nathan_sasa00?igsh=MTZrYnAwdnd1dG9hbA%3D%3D&utm_source=qr',
+			class: 'group-hover:text-clr-accent-red/80'
 		},
 		{
 			icon: 'bi bi-linkedin',
-			link: ''
+			link: '',
+			class: 'group-hover:text-clr-accent-linear-blue'
 		},
 		{
 			icon: 'bi bi-youtube',
-			link: ''
+			link: '',
+			class: 'group-hover:text-clr-accent-red'
 		},
 	]
 }

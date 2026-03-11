@@ -1,1 +1,38 @@
-<p>not-found.component works!</p>
+<section
+    class="w-screen h-screen flex flex-col-reverse lg:flex-row items-center justify-end lg:justify-around p-4">
+    <div
+        class="flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
+        <!-- <h2
+            class="text-2xl md:text-3xl lg:text-4xl xl:text-6xl text-clr-title dark:text-clr-title-dark font-title">
+            Page non trouvée !
+        </h2> -->
+        <p
+            class="dark:text-clr-accent-error text-xl font-text-accent">
+            Aucune information trouvée avec cet URL
+        </p>
+        <p
+            class="dark:text-clr-text-dark text-xl mt-8 font-text">
+            <!-- Suivez-moi pour vous montrer le bon chemin ! -->
+             Voudiez-vous plutôt aller vers ces liens ?
+        </p>
+        <ul
+            class="pl-8">
+            @for(route of linkRoute; track $index){
+                <li
+                    class="list-disc dark:text-clr-title-dark">
+                    <button 
+                        [routerLink]="[route.route]"
+                        class="text-clr-accent-linear-blue hover:text-clr-accent-violet-opacity cursor-pointer transition-all duration-300 max-[321px]:text-xl text-2xl"
+                        >
+                        {{route.title}}
+                    </button>
+                </li>
+            }
+        </ul>
+    </div>
+    <img 
+        src="assets/img/images/site/not-found/not-found.webp" 
+        alt="404 image"
+        class="max-[321px]:h-32 h-64 md:h-72 xl:h-96 animate-pulse duration-500"
+    >
+</section>

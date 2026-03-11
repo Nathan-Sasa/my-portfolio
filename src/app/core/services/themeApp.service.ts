@@ -2,6 +2,7 @@ import { Injectable, signal, computed, PLATFORM_ID, inject, Renderer2 } from "@a
 import { isPlatformBrowser, DOCUMENT } from "@angular/common";
 import { BehaviorSubject } from "rxjs";
 import { App } from "../../app";
+import { GeoLocationComponent } from "../../shared/components/geo-location/geo-location.component";
 
 export enum AppTheme {
     Light = 'light',
@@ -94,6 +95,7 @@ export class ThemeAppService {
     // mapTheme ------------------------------------------------------------------------------
     public appMapTheme(theme: AppTheme){
         this.dark$.next(theme === AppTheme.Dark);
+        // this.mapLoad.initMap()
     }
 
     // Gérer l'écoute du changement de préférence OS ------------------------
