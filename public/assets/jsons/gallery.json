@@ -1,23 +1,29 @@
 [
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img1.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img2.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img3.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img4.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img5.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img6.webp"
     },
     {
-        "photo": "assets/img/images/profile/nathan-profil.webp"
+        "photo": "assets/img/images/gallery/img7.webp"
+    },
+    {
+        "photo": "assets/img/images/gallery/img8.webp"
+    },
+    {
+        "photo": "assets/img/images/gallery/img9.webp"
     }
 ]
